@@ -100,8 +100,7 @@ func player_draw():
 
 	# Add new card instance
 	var card = card_scene.instance()
-	$GUI/CardsPanelContainer/PlayerHBox/CardsCenter.add_child(card)
+	$GUI/CardsPanelContainer/PlayerCardBox.add_child(card)
 
 	# Get index in hand for position setting
 	var card_index = player_hand.find(card_drawn)
-	card.position = Vector2(card.size.x * card_index, 0)
