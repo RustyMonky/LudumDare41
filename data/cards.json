@@ -70,7 +70,7 @@
             "name": "Redirect",
             "type": "Mind",
             "effects": [{
-                "effectType": "Counter",
+                "effectType": "Redirect",
                 "effectValue": null
             }],
             "description": "Reflect an incoming power attack against its caster."
