@@ -46,8 +46,8 @@ func _ready():
 	card_scene = preload("res://card/Card.tscn")
 
 	# Set starting HP values
-	$GUI/playerHp.set_text(String(player_hp))
-	$GUI/compHp.set_text(String(computer_hp))
+	$GUI/topUI/topBox/playerHp.set_text(String(player_hp))
+	$GUI/topUI/topBox/compHp.set_text(String(computer_hp))
 
 	# Load decks
 	# For dev purposes, just use the existing cards array
@@ -62,7 +62,7 @@ func _ready():
 		computer_hand.push_front(computer_deck.pop_front())
 
 	select_timer = $SelectTimer
-	select_timer_label = $GUI/selectTimer
+	select_timer_label = $GUI/topUI/topBox/selectTimer
 
 	set_process(true)
 
@@ -96,6 +96,11 @@ func _process(delta):
 			$GUI/cardDesc.set_text(global.hovered_card.description)
 		elif global.hovered_card == null:
 			$GUI/cardDesc.set_text("")
+
+		if global.selected_card != null:
+			select_timer.stop()
+			select_timer_started = false
+			current_game_state = PLAY
 
 	elif current_game_state == PLAY:
 		pass
