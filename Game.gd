@@ -7,6 +7,11 @@ enum GAME_STATE {
 	END
 }
 
+# Actors HP
+var computer_hp = 10
+var player_hp = 10
+
+# Card JSON load
 var card_data = {}
 var card_file
 var card_file_text
@@ -20,6 +25,10 @@ func _ready():
 
 	for card in card_data.cards:
 		print(card.name)
+
+	# Set starting HP values
+	$GUI/playerHp.set_text(String(player_hp))
+	$GUI/compHp.set_text(String(computer_hp))
 
 #func _process(delta):
 #	# Called every frame. Delta is time since last frame.
