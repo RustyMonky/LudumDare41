@@ -27,6 +27,7 @@ var card_data = {}
 var card_data_2 = {} # TODO - REPLACE
 var card_file
 var card_file_text
+var card_scene
 
 # Timers
 var select_timer
@@ -42,6 +43,8 @@ func _ready():
 	# TODO replace computer deck
 	card_data_2 = JSON.parse(card_file_text).get_result()
 
+	card_scene = preload("res://card/Card.tscn")
+
 	# Set starting HP values
 	$GUI/playerHp.set_text(String(player_hp))
 	$GUI/compHp.set_text(String(computer_hp))
@@ -53,7 +56,7 @@ func _ready():
 
 	# Load hands
 	while player_hand.size() < 3:
-		player_hand.push_front(player_deck.pop_front())
+		player_draw()
 
 	while computer_hand.size() < 3:
 		computer_hand.push_front(computer_deck.pop_front())
@@ -67,8 +70,7 @@ func _process(delta):
 	if current_game_state == DRAW:
 		# If draw step, both players draw a card
 
-		var player_card_drawn = player_deck.pop_front()
-		player_hand.push_front(player_card_drawn)
+		player_draw()
 
 		var computer_card_drawn = computer_deck.pop_front()
 		computer_hand.push_front(computer_card_drawn)
@@ -90,3 +92,16 @@ func _process(delta):
 
 	elif current_game_state == PLAY:
 		pass
+
+# Draws a card for the player
+func player_draw():
+	var card_drawn = player_deck.pop_front()
+	player_hand.push_back(card_drawn)
+
+	# Add new card instance
+	var card = card_scene.instance()
+	$GUI/CardsPanelContainer/PlayerHBox/CardsCenter.add_child(card)
+
+	# Get index in hand for position setting
+	var card_index = player_hand.find(card_drawn)
+	card.position = Vector2(card.size.x * card_index, 0)
