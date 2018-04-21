@@ -13,8 +13,7 @@ func _ready():
 #	pass
 
 func _on_Card_pressed():
-	global.selected_card = self
-	print(data)
+	global.selected_card = data
 
 
 func _on_Card_mouse_entered():

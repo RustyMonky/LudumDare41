@@ -31,11 +31,20 @@ var card_scene
 
 # Text
 var game_text
+var text_array = []
+var text_index = null
 
 # Timers
 var select_timer
 var select_timer_label
 var select_timer_started = false
+
+# Card selection
+var computer_card_selected = false
+var computer_card = null
+
+# UI
+var player_hand_ui
 
 func _ready():
 	# Temporary load of card JSON data
@@ -51,6 +60,8 @@ func _ready():
 	# Set starting HP values
 	$GUI/topUI/topBox/playerHp.set_text(String(player_hp))
 	$GUI/topUI/topBox/compHp.set_text(String(computer_hp))
+
+	player_hand_ui = $GUI/cardsPanel/cardMargins/playerCardBox
 
 	# Load decks
 	# For dev purposes, just use the existing cards array
@@ -70,6 +81,8 @@ func _ready():
 	select_timer_label = $GUI/topUI/topBox/selectTimer
 
 	set_process(true)
+
+	set_process_input(true)
 
 func _process(delta):
 	if current_game_state == DRAW:
@@ -103,12 +116,43 @@ func _process(delta):
 			game_text.set_text("")
 
 		if global.selected_card != null:
+			# Stop timer and clear text
 			select_timer.stop()
 			select_timer_started = false
+			game_text.set_text("")
+
+			# Remove selected card from your hand
+			var selected_card_index = player_hand.find(global.selected_card)
+			player_hand.erase(global.selected_card)
+			player_hand_ui.get_child(selected_card_index).queue_free()
+
+			# Disabled hand until next SELECT phase
+			for card in player_hand_ui.get_children():
+				card.disabled = true
+
 			current_game_state = PLAY
 
 	elif current_game_state == PLAY:
-		pass
+
+		# Process card selection and resolution
+		if not computer_card_selected:
+			var card_to_play_index = randi() % computer_hand.size()
+			computer_card = computer_hand[card_to_play_index]
+			computer_hand.erase(computer_card)
+			computer_card_selected = true
+
+		elif computer_card_selected:
+			if text_index == null:
+				prep_text([
+					"You played " + global.selected_card.name + "!",
+					"Computer played " + computer_card.name + "!"
+				])
+
+func _input(event):
+	if event.is_action_pressed("ui_accept"):
+		if text_index != null and text_index + 1 < text_array.size():
+			text_index += 1
+			set_text()
 
 # Draws a card for the player
 func player_draw():
@@ -118,7 +162,19 @@ func player_draw():
 	# Add new card instance
 	var card = card_scene.instance()
 	card.data = card_drawn
-	$GUI/cardsPanel/cardMargins/playerCardBox.add_child(card)
+	player_hand_ui.add_child(card)
 
 	# Get index in hand for position setting
 	var card_index = player_hand.find(card_drawn)
+
+func prep_text(texts):
+	# First, clear out the array
+	text_array = []
+	text_index = 0
+
+	for strings in texts:
+		text_array.append(strings)
+	set_text()
+
+func set_text():
+	game_text.set_text(text_array[text_index])
