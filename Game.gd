@@ -15,8 +15,8 @@ var computer_hp = 10
 var player_hp = 10
 
 # Actors Decks
-var computer_deck
-var player_deck
+var computer_deck = []
+var player_deck = []
 
 # Actor Hands
 var computer_hand = []
@@ -43,8 +43,9 @@ var select_timer_started = false
 var computer_card_selected = false
 var computer_card = null
 
-# Card resolution
+# Resolutions
 var cards_resolved = false
+var draw_resolved = false
 
 # UI
 var player_hand_ui
@@ -67,9 +68,16 @@ func _ready():
 	player_hand_ui = $GUI/cardsPanel/cardMargins/playerCardBox
 
 	# Load decks
-	# For dev purposes, just use the existing cards array
-	computer_deck = card_data_2.cards
-	player_deck = card_data.cards
+	# Randomized for now
+	while player_deck.size() < 15:
+		randomize()
+		var index = randi() % card_data.cards.size()
+		player_deck.append(card_data.cards[index])
+
+	while computer_deck.size() < 15:
+		randomize()
+		var index = randi() % card_data_2.cards.size()
+		computer_deck.append(card_data_2.cards[index])
 
 	# Load hands
 	while player_hand.size() < 3:
@@ -79,6 +87,7 @@ func _ready():
 		computer_hand.push_front(computer_deck.pop_front())
 
 	game_text = $GUI/fighterContainer/gameText
+	game_text.set_text("FIGHT")
 
 	select_timer = $SelectTimer
 	select_timer_label = $GUI/topUI/topBox/selectTimer
@@ -88,16 +97,16 @@ func _ready():
 	set_process_input(true)
 
 func _process(delta):
-	if current_game_state == DRAW:
+	if current_game_state == DRAW and not draw_resolved:
 		# If draw step, both players draw a card
+		var new_card = player_draw()
+		computer_draw()
+		prep_text(["You drew " + new_card.name + "!"])
+		draw_resolved = true
 
-		player_draw()
-
-		var computer_card_drawn = computer_deck.pop_front()
-		computer_hand.push_front(computer_card_drawn)
-
-		current_game_state = SELECT
 	elif current_game_state == SELECT:
+		for card in player_hand_ui.get_children():
+			card.disabled = false
 
 		# Timer logic
 		if not select_timer_started:
@@ -126,7 +135,6 @@ func _process(delta):
 
 			# Remove selected card from your hand
 			var selected_card_index = player_hand.find(global.selected_card)
-			player_hand_ui.get_child(selected_card_index).queue_free()
 			player_hand.erase(global.selected_card)
 
 			current_game_state = PLAY
@@ -155,10 +163,14 @@ func _input(event):
 		elif text_index != null and text_index + 1 >= text_array.size():
 			text_index = null
 			game_text.set_text("")
-			if current_game_state == PLAY:
-				current_game_state == END
-			elif current_game_state == END:
-				current_game_state == DRAW
+
+			if current_game_state == DRAW and draw_resolved:
+				current_game_state = SELECT
+				draw_resolved = false
+		elif text_index == null:
+			if current_game_state == PLAY and cards_resolved:
+				current_game_state = DRAW
+				cards_resolved = false
 
 # Draws a card for the player
 func player_draw():
@@ -169,6 +181,8 @@ func player_draw():
 	var card = card_scene.instance()
 	card.data = card_drawn
 	player_hand_ui.add_child(card)
+
+	return card_drawn
 
 # Draws a card for the computer
 func computer_draw():
@@ -301,27 +315,50 @@ func resolve_cards():
 	# Check for counters
 	if player_effects.counter and computer_effects.physical_damage > 0:
 		player_effects.physical_damage = computer_effects.physical_damage * 2
-		battle_texts.append("You countered for " + player_effects.physical_damage + "!")
+		battle_texts.append("You countered for " + String(player_effects.physical_damage) + "!")
 	elif computer_effects.counter and player_effects.physical_damage > 0:
 		computer_effects.physical_damage = player_effects.physical_damage * 2
-		battle_texts.append("Computer countered for " + computer_effects.physical_damage + "!")
+		battle_texts.append("Computer countered for " + String(computer_effects.physical_damage) + "!")
 
 	# Check for redirects
 	if player_effects.redirect and computer_effects.power_damage > 0:
 		player_effects.power_damage = computer_effects.power_damage
 		computer_effects.power_damage = 0
-		battle_texts.append("You redirected " + player_effects.power_damage + "!")
+		battle_texts.append("You redirected " + String(player_effects.power_damage) + "!")
 	elif computer_effects.redirect and player_effects.power_damage > 0:
 		computer_effects.power_damage = player_effects.power_damage
 		player_effects.power_damage = 0
-		battle_texts.append("Computer redirected " + player_effects.power_damage + " at you!")
+		battle_texts.append("Computer redirected " + String(player_effects.power_damage) + " at you!")
 
 	# Now, we can calculate damage
 	# Player damage dealt
-	var player_damage_dealt = (abs(player_effects.physical_damage - computer_effects.physical_block)) + (abs(player_effects.power_damage - computer_effects.power_block))
+	var player_physical_dmg = 0
+	if player_effects.physical_damage - computer_effects.physical_block < 0:
+		player_physical_dmg = 0
+	else:
+		player_physical_dmg = player_effects.physical_damage - computer_effects.physical_block
+
+	var player_power_dmg = 0
+	if player_effects.power_damage - computer_effects.power_block < 0:
+		player_power_dmg = 0
+	else:
+		player_power_dmg = player_effects.power_damage - computer_effects.power_block
+
+	var player_damage_dealt = player_physical_dmg + player_power_dmg
 
 	# Computer damage dealt
-	var computer_damage_dealt = (abs(computer_effects.physical_damage - player_effects.physical_block)) + (abs(computer_effects.power_damage - player_effects.power_block))
+	var computer_physical_dmg = 0
+	if computer_effects.physical_damage - computer_effects.physical_block < 0:
+		computer_physical_dmg = 0
+	else:
+		computer_physical_dmg = computer_effects.physical_damage - computer_effects.physical_block
+
+	var computer_power_dmg = 0
+	if computer_effects.power_damage - computer_effects.power_block < 0:
+		computer_power_dmg = 0
+	else:
+		computer_power_dmg = computer_effects.power_damage - computer_effects.power_block
+	var computer_damage_dealt = computer_physical_dmg + computer_power_dmg
 
 	# Check for evasion
 	if player_effects.evade:
@@ -337,15 +374,21 @@ func resolve_cards():
 	if new_player_hp < player_hp:
 		battle_texts.append("You took " + String(player_hp - new_player_hp) + " damage!")
 	elif new_player_hp > player_hp:
-		battle_texts.append("You healed for " + String(new_player_hp - player_hp) + " HP!")
+		battle_texts.append("You gained " + String(new_player_hp - player_hp) + " HP!")
+	else:
+		battle_texts.append("You took no damage.")
 	player_hp = new_player_hp
+	$GUI/topUI/topBox/playerHp.set_text(String(player_hp))
 
 	var new_computer_hp = computer_hp - player_damage_dealt + computer_effects.heal - computer_effects.recoil
 	if new_computer_hp < computer_hp:
 		battle_texts.append("Computer took " + String(computer_hp - new_computer_hp) + " damage!")
 	elif new_computer_hp > computer_hp:
-		battle_texts.append("Computer healed for " + String(new_computer_hp - computer_hp) + " HP!")
+		battle_texts.append("Computer gained " + String(new_computer_hp - computer_hp) + " HP!")
+	else:
+		battle_texts.append("Computer took no damage.")
 	computer_hp = new_computer_hp
+	$GUI/topUI/topBox/compHp.set_text(String(computer_hp))
 
 	# Check for card draw
 	if player_effects.draw > 0:
@@ -364,4 +407,7 @@ func resolve_cards():
 
 	# We're finally done, prep the texts
 	prep_text(battle_texts)
+	global.selected_card = null
+	computer_card = null
+	computer_card_selected = false
 	cards_resolved = true
