@@ -1,0 +1,103 @@
+{
+    "cards": [
+        {
+            "name": "Punch!",
+            "type": "Brawn",
+            "effects": [{
+                "effectType": "Damage",
+                "effectValue": 3
+            }],
+            "description": "Deal 3 phyiscal damage."
+        },
+        {
+            "name": "Guard",
+            "type": "Brawn",
+            "effects": [{
+                "effectType": "Block",
+                "effectValue": 3
+            }],
+            "description": "Negate 3 physical damage."
+        },
+        {
+            "name": "Eye Beams",
+            "type": "Power",
+            "effects": [{
+                "effectType": "Damage",
+                "effectValue": 3
+            }],
+            "description": "Deal 3 power damage. From your eyeballs!"
+        },
+        {
+            "name": "Think",
+            "type": "Mind",
+            "effects": [{
+                "effectType": "Draw",
+                "effectValue": 1
+            }],
+            "description": "Draw a card."
+        },
+        {
+            "name": "Vengeful Lunge",
+            "type": "Brawn",
+            "effects": [{
+                "effectType": "Counter",
+                "effectValue": null
+            }],
+            "description": "Deal double the physical damage received."
+        },
+        {
+            "name": "Dodge",
+            "type": "Mind",
+            "effects": [{
+                "effectType": "Evade",
+                "effectValue": 0.75
+            }],
+            "description": "Completely dodge an incoming attack. Has a 75% chance."
+        },
+        {
+            "name": "Shockwave",
+            "type": "Power",
+            "effects": [{
+                "effectType": "Block",
+                "effectValue": 2
+            }, {
+                "effectType": "Damage",
+                "effectValue": 2
+            }],
+            "description": "Deal and block 2 damage with an explosive force around yourself."
+        },
+        {
+            "name": "Redirect",
+            "type": "Mind",
+            "effects": [{
+                "effectType": "Counter",
+                "effectValue": null
+            }],
+            "description": "Reflect an incoming power attack against its caster."
+        },
+        {
+            "name": "Demonic Pact",
+            "type": "Power",
+            "effects": [{
+                "effectType": "Draw",
+                "effectValue": 2
+            }, {
+                "effectType": "Damage",
+                "effectValue": 1
+            }, {
+                "effectType": "Recoil",
+                "effectValue": 2
+            }],
+            "description": "Draw 2 cards, deal 1 damage, take 2 damage."
+        },
+        {
+            "name": "Heal",
+            "type": "Mind",
+            "effects": [{
+                "effectType": "Heal",
+                "effectValue": 2
+            }],
+            "description": "Recover 2 HP"
+        },
+    ]
+}
