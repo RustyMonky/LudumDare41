@@ -7,6 +7,7 @@ enum GAME_STATE {
 	END
 }
 
+# Current game state
 var current_game_state = DRAW
 
 # Actors HP
@@ -26,6 +27,11 @@ var card_data = {}
 var card_data_2 = {} # TODO - REPLACE
 var card_file
 var card_file_text
+
+# Timers
+var select_timer
+var select_timer_label
+var select_timer_started = false
 
 func _ready():
 	# Temporary load of card JSON data
@@ -52,6 +58,9 @@ func _ready():
 	while computer_hand.size() < 3:
 		computer_hand.push_front(computer_deck.pop_front())
 
+	select_timer = $SelectTimer
+	select_timer_label = $GUI/selectTimer
+
 	set_process(true)
 
 func _process(delta):
@@ -66,4 +75,18 @@ func _process(delta):
 
 		current_game_state = SELECT
 	elif current_game_state == SELECT:
+
+		if not select_timer_started:
+			select_timer.start()
+			select_timer_started = true
+			select_timer_label.set_text(String(int(round(select_timer.get_time_left()))))
+
+		elif select_timer_started and not select_timer.is_stopped():
+			select_timer_label.set_text(String(int(round(select_timer.get_time_left()))))
+
+		elif select_timer_started and select_timer.is_stopped():
+			current_game_state = PLAY
+			select_timer_started = false
+
+	elif current_game_state == PLAY:
 		pass
