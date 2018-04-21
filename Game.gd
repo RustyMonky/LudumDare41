@@ -29,6 +29,9 @@ var card_file
 var card_file_text
 var card_scene
 
+# Text
+var game_text
+
 # Timers
 var select_timer
 var select_timer_label
@@ -60,6 +63,8 @@ func _ready():
 
 	while computer_hand.size() < 3:
 		computer_hand.push_front(computer_deck.pop_front())
+
+	game_text = $GUI/fighterContainer/gameText
 
 	select_timer = $SelectTimer
 	select_timer_label = $GUI/topUI/topBox/selectTimer
@@ -93,9 +98,9 @@ func _process(delta):
 
 		# Card logic
 		if global.hovered_card != null:
-			$GUI/cardDesc.set_text(global.hovered_card.description)
+			game_text.set_text(global.hovered_card.description)
 		elif global.hovered_card == null:
-			$GUI/cardDesc.set_text("")
+			game_text.set_text("")
 
 		if global.selected_card != null:
 			select_timer.stop()
