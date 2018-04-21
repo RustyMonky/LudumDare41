@@ -78,6 +78,7 @@ func _process(delta):
 		current_game_state = SELECT
 	elif current_game_state == SELECT:
 
+		# Timer logic
 		if not select_timer_started:
 			select_timer.start()
 			select_timer_started = true
@@ -90,6 +91,12 @@ func _process(delta):
 			current_game_state = PLAY
 			select_timer_started = false
 
+		# Card logic
+		if global.hovered_card != null:
+			$GUI/cardDesc.set_text(global.hovered_card.description)
+		elif global.hovered_card == null:
+			$GUI/cardDesc.set_text("")
+
 	elif current_game_state == PLAY:
 		pass
 
@@ -100,7 +107,8 @@ func player_draw():
 
 	# Add new card instance
 	var card = card_scene.instance()
-	$GUI/CardsPanelContainer/PlayerCardBox.add_child(card)
+	card.data = card_drawn
+	$GUI/cardsPanel/cardMargins/playerCardBox.add_child(card)
 
 	# Get index in hand for position setting
 	var card_index = player_hand.find(card_drawn)
