@@ -7,6 +7,8 @@ var selected_fighter_info = null
 var selected_fighter_patch = null
 var selected_fighter_sprite = null
 
+var ready_button = null
+
 func _ready():
 	fighter_select_box = $GUI/Container/VBoxContainer/fighterSelectContainer/selectBackground/selectionHBox
 
@@ -15,6 +17,8 @@ func _ready():
 	selected_fighter_patch = $GUI/Container/VBoxContainer/selectedFighterContainer/HBoxContainer/Container/selectedFighterPatch
 	selected_fighter_info = $GUI/Container/VBoxContainer/selectedFighterContainer/HBoxContainer/Container/selectedFighterPatch/selectedFighterInfo
 	selected_fighter_sprite = $GUI/Container/VBoxContainer/selectedFighterContainer/HBoxContainer/Container/selectedFighter
+
+	ready_button = $GUI/Container/VBoxContainer/fighterSelectContainer/selectBackground/readyButton
 
 	for fighter in global.fighter_data.fighters:
 		var fighterChar = fighter_select_button_scene.instance()
@@ -36,4 +40,7 @@ func _process(delta):
 
 		selected_fighter_patch.show()
 		selected_fighter_info.set_text(global.player_selected_fighter.name)
+		ready_button.show()
 		
+func _on_readyButton_pressed():
+	global._goto_scene("res://Game.tscn")

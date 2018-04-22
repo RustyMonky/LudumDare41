@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://fighters/Fighters.gd" type="Script" id=1]
 [ext_resource path="res://assets/sprites/topUiPatch.png" type="Texture" id=2]
 [ext_resource path="res://assets/fonts/fighterMenuTitleFont.tres" type="DynamicFont" id=3]
 [ext_resource path="res://assets/sprites/fighterSelect/background.png" type="Texture" id=4]
-[ext_resource path="res://assets/fonts/selectFighterPanelFont.tres" type="DynamicFont" id=5]
+[ext_resource path="res://assets/sprites/readyButton.png" type="Texture" id=5]
+[ext_resource path="res://assets/sprites/readyButtonHover.png" type="Texture" id=6]
+[ext_resource path="res://assets/fonts/selectFighterPanelFont.tres" type="DynamicFont" id=7]
 
 [node name="Node" type="Node" index="0"]
 
@@ -116,7 +118,6 @@ _sections_unfolded = [ "Rect", "custom_fonts" ]
 
 [node name="fighterSelectContainer" type="Container" parent="GUI/Container/VBoxContainer" index="1"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -172,8 +173,35 @@ size_flags_vertical = 1
 alignment = 1
 _sections_unfolded = [ "Margin", "Rect" ]
 
+[node name="readyButton" type="TextureButton" parent="GUI/Container/VBoxContainer/fighterSelectContainer/selectBackground" index="1"]
+
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -32.0
+margin_top = -20.0
+margin_right = 32.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 5 )
+texture_hover = ExtResource( 6 )
+_sections_unfolded = [ "Rect", "Textures", "Visibility" ]
+
 [node name="selectedFighterContainer" type="Container" parent="GUI/Container/VBoxContainer" index="2"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -265,7 +293,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = ExtResource( 5 )
+custom_fonts/font = ExtResource( 7 )
 align = 1
 valign = 1
 autowrap = true
@@ -289,5 +317,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 stretch_mode = 3
 _sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Mouse", "Rect" ]
+
+[connection signal="pressed" from="GUI/Container/VBoxContainer/fighterSelectContainer/selectBackground/readyButton" to="." method="_on_readyButton_pressed"]
 
 
