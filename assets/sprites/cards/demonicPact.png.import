@@ -7,10 +7,10 @@ path="res://.import/demonicPact.png-8c5bdb6c92350c643f586b72bcff5a5f.stex"
 [deps]
 
 source_file="res://assets/sprites/cards/demonicPact.png"
-source_md5="9b1a4932f3af4070b24dfd6ea1110b42"
+source_md5="77282d795ff45488faecfa1fcd97b700"
 
 dest_files=[ "res://.import/demonicPact.png-8c5bdb6c92350c643f586b72bcff5a5f.stex" ]
-dest_md5="ae1d2e60137c060335133b7b755bc478"
+dest_md5="2dfd2a32861b582103b328af6ec11411"
 
 [params]
 

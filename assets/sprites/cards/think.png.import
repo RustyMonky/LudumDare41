@@ -7,10 +7,10 @@ path="res://.import/think.png-14e7e237a8c4d6e9d4e29858a64ab4f3.stex"
 [deps]
 
 source_file="res://assets/sprites/cards/think.png"
-source_md5="7a800914daca4ee25b26d354b039ec19"
+source_md5="984a3676f79fe2282293cedd5e0a17ec"
 
 dest_files=[ "res://.import/think.png-14e7e237a8c4d6e9d4e29858a64ab4f3.stex" ]
-dest_md5="8a557449bc2852d114bf679953754d89"
+dest_md5="aeb75e18f4636e96028931733f608bb8"
 
 [params]
 

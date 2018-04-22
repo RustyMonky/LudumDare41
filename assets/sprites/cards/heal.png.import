@@ -7,10 +7,10 @@ path="res://.import/heal.png-9475eaf488d95a8af8dc5864ab7084ce.stex"
 [deps]
 
 source_file="res://assets/sprites/cards/heal.png"
-source_md5="a76ea4c536c9401f84553e606af6928b"
+source_md5="cdeb95c03527849a5de5885caf1b7beb"
 
 dest_files=[ "res://.import/heal.png-9475eaf488d95a8af8dc5864ab7084ce.stex" ]
-dest_md5="407346abf2bfbbdff2c6603493e87fda"
+dest_md5="37cb7de79785bfd0d64176c29251d502"
 
 [params]
 

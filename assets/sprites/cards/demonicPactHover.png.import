@@ -7,10 +7,10 @@ path="res://.import/demonicPactHover.png-994da383b8c41cf1e5f700dd42a58af8.stex"
 [deps]
 
 source_file="res://assets/sprites/cards/demonicPactHover.png"
-source_md5="dd0059095bc67173c923dbf7db6cfdcf"
+source_md5="c504be0a18bb0f4230ec0e9c2489371d"
 
 dest_files=[ "res://.import/demonicPactHover.png-994da383b8c41cf1e5f700dd42a58af8.stex" ]
-dest_md5="da38fba0f3c27eb0a2aa7adb12be26c0"
+dest_md5="7acabd0f70091801430f507caaa45f9d"
 
 [params]
 

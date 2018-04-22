@@ -7,10 +7,10 @@ path="res://.import/blockHover.png-495371cb4d8472579fd270122745ff05.stex"
 [deps]
 
 source_file="res://assets/sprites/cards/blockHover.png"
-source_md5="4e692f7267550c87f7588e8b7ee3fc39"
+source_md5="d14fe6159f02d4485797cfb91fdb84e1"
 
 dest_files=[ "res://.import/blockHover.png-495371cb4d8472579fd270122745ff05.stex" ]
-dest_md5="cc2d7a0268e810bb185787e0d9bdc615"
+dest_md5="312763120a0be0ebef024568d5e20fc7"
 
 [params]
 

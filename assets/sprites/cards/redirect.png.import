@@ -7,10 +7,10 @@ path="res://.import/redirect.png-5e0941be7c89affaf140d499a17717a9.stex"
 [deps]
 
 source_file="res://assets/sprites/cards/redirect.png"
-source_md5="ac686d53da20fe2bad4396800854318d"
+source_md5="35c454fddbb1b036918b55ea0904fa9a"
 
 dest_files=[ "res://.import/redirect.png-5e0941be7c89affaf140d499a17717a9.stex" ]
-dest_md5="3d3713e70da181cf1a9afe0459eca43c"
+dest_md5="c754583d6e45226f26df5a888b64df7b"
 
 [params]
 

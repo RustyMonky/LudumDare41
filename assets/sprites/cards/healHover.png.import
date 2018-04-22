@@ -7,10 +7,10 @@ path="res://.import/healHover.png-0829847e898cd20c0ec102dc5d742a26.stex"
 [deps]
 
 source_file="res://assets/sprites/cards/healHover.png"
-source_md5="f596c4198438a4f9e450e8ab2274806f"
+source_md5="2bf3bb4ba8e8dbb9dbdf7bf196c28d04"
 
 dest_files=[ "res://.import/healHover.png-0829847e898cd20c0ec102dc5d742a26.stex" ]
-dest_md5="eda37b743812339312affcaf3cffb00f"
+dest_md5="498368e9c74b5b9bfa6b803252f730dc"
 
 [params]
 

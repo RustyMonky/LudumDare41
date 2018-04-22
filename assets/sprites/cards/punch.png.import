@@ -7,10 +7,10 @@ path="res://.import/punch.png-3badf22905ad9fb194e445e2232bd8a5.stex"
 [deps]
 
 source_file="res://assets/sprites/cards/punch.png"
-source_md5="917dd93ea94f110302d2cbec9d58e6e5"
+source_md5="13200e03c2489ba7d721239fe4f5c459"
 
 dest_files=[ "res://.import/punch.png-3badf22905ad9fb194e445e2232bd8a5.stex" ]
-dest_md5="811530c916b5e87d6ba807a4d1c15be1"
+dest_md5="30f053e8a531c1c83ab178c3299c3924"
 
 [params]
 

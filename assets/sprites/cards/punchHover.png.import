@@ -7,10 +7,10 @@ path="res://.import/punchHover.png-99948b0015e6e99f2218bd340600eb89.stex"
 [deps]
 
 source_file="res://assets/sprites/cards/punchHover.png"
-source_md5="179f2cc8053db964c2ce7993636d7f46"
+source_md5="d7b399a2ba0a85b83c287773bfe087ae"
 
 dest_files=[ "res://.import/punchHover.png-99948b0015e6e99f2218bd340600eb89.stex" ]
-dest_md5="afbc89733a539b7289fc25c5bb35b5bb"
+dest_md5="3af2cf1fc1047deeaf62eb9192ce43f9"
 
 [params]
 

@@ -7,10 +7,10 @@ path="res://.import/vengefulLunge.png-5d0141535d20d8895610dae7d2d2bd14.stex"
 [deps]
 
 source_file="res://assets/sprites/cards/vengefulLunge.png"
-source_md5="d41b4e7d61ffe6905b8db830e2c2b5d4"
+source_md5="75c10bddd89a779b7fb506e5f3c5f1e7"
 
 dest_files=[ "res://.import/vengefulLunge.png-5d0141535d20d8895610dae7d2d2bd14.stex" ]
-dest_md5="abeb413900b42ee08bcbf8fbb65d3187"
+dest_md5="8e77f36aff87fee7c8227d45067ab321"
 
 [params]
 

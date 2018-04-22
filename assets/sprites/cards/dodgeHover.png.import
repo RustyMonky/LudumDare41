@@ -7,10 +7,10 @@ path="res://.import/dodgeHover.png-2de8f690925945ca6bb0f6203b596ae2.stex"
 [deps]
 
 source_file="res://assets/sprites/cards/dodgeHover.png"
-source_md5="0b63b5372212afff71d738bd9484bc17"
+source_md5="6826ea24cb71dcaf539519865b71ac9a"
 
 dest_files=[ "res://.import/dodgeHover.png-2de8f690925945ca6bb0f6203b596ae2.stex" ]
-dest_md5="9f43f5548cdc1ad2eb59962e262ed570"
+dest_md5="3e3be2888dd02340e62386c5e797f862"
 
 [params]
 

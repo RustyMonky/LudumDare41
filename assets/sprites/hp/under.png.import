@@ -7,10 +7,10 @@ path="res://.import/under.png-367228163274622e2e5d0ae788abdefd.stex"
 [deps]
 
 source_file="res://assets/sprites/hp/under.png"
-source_md5="799cb5a297c05b3cd29efc1b90303cf8"
+source_md5="e80b2a567270b45ba35cfa31a23bb77a"
 
 dest_files=[ "res://.import/under.png-367228163274622e2e5d0ae788abdefd.stex" ]
-dest_md5="386c5623c270fb9d572138116f545cde"
+dest_md5="b59e3d6b2343049ed6a72bca77381f7d"
 
 [params]
 

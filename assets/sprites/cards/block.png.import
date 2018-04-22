@@ -7,10 +7,10 @@ path="res://.import/block.png-76fd9892a388dac16246fece6a6d92e6.stex"
 [deps]
 
 source_file="res://assets/sprites/cards/block.png"
-source_md5="cf05c29f5f8cba42038fe21abd9f5307"
+source_md5="8b44a43d05cbda0e26c9bf464f18c871"
 
 dest_files=[ "res://.import/block.png-76fd9892a388dac16246fece6a6d92e6.stex" ]
-dest_md5="54d0f270ce28a0939f33614e3d063cd2"
+dest_md5="f7a7a8e72948b70b849008bf8feb8cec"
 
 [params]
 

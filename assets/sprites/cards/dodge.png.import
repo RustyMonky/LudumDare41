@@ -7,10 +7,10 @@ path="res://.import/dodge.png-3cc916602b06cfbf651e3f66234e435e.stex"
 [deps]
 
 source_file="res://assets/sprites/cards/dodge.png"
-source_md5="31266dcf1f84d0e6adafdf0cf12dde84"
+source_md5="3b3c116d3ed190505d79b6937a5e68a8"
 
 dest_files=[ "res://.import/dodge.png-3cc916602b06cfbf651e3f66234e435e.stex" ]
-dest_md5="a610afc2de59833a1ea15e646cb38ccd"
+dest_md5="7bcdfdfebdc976e983f1431b9300b11e"
 
 [params]
 

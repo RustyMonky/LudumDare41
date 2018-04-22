@@ -7,10 +7,10 @@ path="res://.import/progress.png-d005140f4cf310c00e5c464740135e68.stex"
 [deps]
 
 source_file="res://assets/sprites/hp/progress.png"
-source_md5="adf6cd8507198f0774f247556a84b756"
+source_md5="303806e4390d80fd09b97231ec11fc21"
 
 dest_files=[ "res://.import/progress.png-d005140f4cf310c00e5c464740135e68.stex" ]
-dest_md5="d2103012568c40758c8deb698a374b40"
+dest_md5="68e71d9bc91d6a81f3cf06bef8de7cb3"
 
 [params]
 

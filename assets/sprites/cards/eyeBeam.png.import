@@ -7,10 +7,10 @@ path="res://.import/eyeBeam.png-d79680ae0b70d4eff51702a1e8983d37.stex"
 [deps]
 
 source_file="res://assets/sprites/cards/eyeBeam.png"
-source_md5="6ad5052815e629d5799e41ccb343ad60"
+source_md5="4e5031ef2e51451f62c316fda01ac135"
 
 dest_files=[ "res://.import/eyeBeam.png-d79680ae0b70d4eff51702a1e8983d37.stex" ]
-dest_md5="9ebd0f763ae8b3043d89f2675e9fec2f"
+dest_md5="52bd0448538d32001dfba6134510cbb3"
 
 [params]
 

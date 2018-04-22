@@ -7,10 +7,10 @@ path="res://.import/over.png-f001acd299a0d706fc12d27accbf6255.stex"
 [deps]
 
 source_file="res://assets/sprites/hp/over.png"
-source_md5="7be728b537734008375bfc52f79126d9"
+source_md5="a9614fb4a1171a8cbc58282ad604d530"
 
 dest_files=[ "res://.import/over.png-f001acd299a0d706fc12d27accbf6255.stex" ]
-dest_md5="a29bc3ecdc02c914e4813cf8fa763215"
+dest_md5="cadf1cdb1e31e97212f1afd043707e5e"
 
 [params]
 

@@ -7,10 +7,10 @@ path="res://.import/thinkHover.png-eb16e381f5e0bd8b3911ab0a93f685f4.stex"
 [deps]
 
 source_file="res://assets/sprites/cards/thinkHover.png"
-source_md5="6f883f812f4df596daf08831a90e2ac1"
+source_md5="e96493ef0fcce73da8ebc578db5ba00c"
 
 dest_files=[ "res://.import/thinkHover.png-eb16e381f5e0bd8b3911ab0a93f685f4.stex" ]
-dest_md5="6e025263d95876fc8b015391f8904015"
+dest_md5="d85e16fa63f58199093650724ec136a1"
 
 [params]
 

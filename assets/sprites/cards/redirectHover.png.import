@@ -7,10 +7,10 @@ path="res://.import/redirectHover.png-5ac36a268e428ccc7a929b90f9a967b0.stex"
 [deps]
 
 source_file="res://assets/sprites/cards/redirectHover.png"
-source_md5="746d8eb0e146243a2f4eb70427b7f48c"
+source_md5="baca9225583dca571e021a979d2bd7f8"
 
 dest_files=[ "res://.import/redirectHover.png-5ac36a268e428ccc7a929b90f9a967b0.stex" ]
-dest_md5="dcc0ad401b651bef999681cfb8386209"
+dest_md5="d4ad38ae9086bb822e035c57984e6753"
 
 [params]
 

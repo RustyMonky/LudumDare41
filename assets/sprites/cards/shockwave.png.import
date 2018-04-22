@@ -7,10 +7,10 @@ path="res://.import/shockwave.png-76e059b6a4e815ce2e1286cb8970d31b.stex"
 [deps]
 
 source_file="res://assets/sprites/cards/shockwave.png"
-source_md5="072fe7d18ba8c9793fbb1c506c146e97"
+source_md5="2a2f129d9298216a25684deed65a07c1"
 
 dest_files=[ "res://.import/shockwave.png-76e059b6a4e815ce2e1286cb8970d31b.stex" ]
-dest_md5="3a6fc993a3f2e075effe6af97ba6a50c"
+dest_md5="a7096f63efee0110350fa6c3df4b7a47"
 
 [params]
 
