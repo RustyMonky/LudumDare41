@@ -31,6 +31,7 @@ var card_scene
 
 # Text
 var game_text
+var game_patch_ui
 var text_array = []
 var text_index = null
 
@@ -93,8 +94,8 @@ func _ready():
 	while computer_hand.size() < 3:
 		computer_hand.push_front(computer_deck.pop_front())
 
-	game_text = $GUI/fighterContainer/gameText
-	game_text.set_text("FIGHT")
+	game_patch_ui = $GUI/fighterContainer/gamePatch
+	game_text = $GUI/fighterContainer/gamePatch/gameText
 
 	select_timer = $SelectTimer
 	select_timer_label = $GUI/topUI/topBox/timer/selectTimer
@@ -130,8 +131,10 @@ func _process(delta):
 
 		# Card logic
 		if global.hovered_card != null:
+			game_patch_ui.show()
 			game_text.set_text(global.hovered_card.description)
 		elif global.hovered_card == null:
+			game_patch_ui.hide()
 			game_text.set_text("")
 
 		if global.selected_card != null:
@@ -170,6 +173,7 @@ func _input(event):
 		elif text_index != null and text_index + 1 >= text_array.size():
 			text_index = null
 			game_text.set_text("")
+			game_patch_ui.hide()
 
 			if current_game_state == DRAW and draw_resolved:
 				current_game_state = SELECT
@@ -212,6 +216,8 @@ func prep_text(texts):
 
 # Sets text based on text index
 func set_text():
+	if not game_patch_ui.visible:
+		game_patch_ui.show()
 	game_text.set_text(text_array[text_index])
 
 # Resolve card logic
