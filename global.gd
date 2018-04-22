@@ -20,6 +20,7 @@ var fighter_data
 
 # Fighter selection
 var player_selected_fighter = null
+var computer_selected_fighter = null
 
 # Fight statuses
 var fight_result = null

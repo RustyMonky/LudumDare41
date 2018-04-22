@@ -48,7 +48,8 @@ var player_hand_ui
 var player_hp_ui
 var computer_hp_ui
 
-var fighter_sprite = null
+var player_sprite = null
+var computer_sprite = null
 
 func _ready():
 	card_scene = preload("res://card/Card.tscn")
@@ -62,9 +63,14 @@ func _ready():
 
 	player_hand_ui = $GUI/cardsPanel/playerCardBox
 
-	fighter_sprite = $GUI/fighterContainer/fighterSprite
-	var sprite_to_load = load(global.player_selected_fighter.largeTexture)
-	fighter_sprite.set_texture(sprite_to_load)
+	player_sprite = $GUI/fighterContainer/playerSprite
+	var player_sprite_to_load = load(global.player_selected_fighter.largeTexture)
+	player_sprite.set_texture(player_sprite_to_load)
+
+	computer_sprite = $GUI/fighterContainer/computerSprite
+	var computer_sprite_to_load = load(global.computer_selected_fighter.largeTexture)
+	computer_sprite.set_texture(computer_sprite_to_load)
+	computer_sprite.set_flip_h(true)
 
 	# Fix margins...
 
@@ -182,13 +188,12 @@ func _input(event):
 func player_draw():
 	# If deck is empty, we lose feelsbadman
 	if player_deck.size() == 0:
-		global.fight_result = "defeat"
-		global.selected_card = null
-		computer_card = null
-		computer_card_selected = false
 		prep_text(["Your deck has no more cards!"])
+		player_defeat()
 
 	var card_drawn = player_deck.pop_front()
+	if card_drawn == null:
+		player_defeat()
 	player_hand.push_back(card_drawn)
 
 	# Add new card instance
@@ -206,13 +211,12 @@ func player_draw():
 func computer_draw():
 	# If deck is empty, computer loses feelsgudman
 	if computer_deck.size() == 0:
-		global.fight_result = "victory"
-		global.selected_card = null
-		computer_card = null
-		computer_card_selected = false
 		prep_text(["Computer deck has no more cards!"])
+		computer_defeat()
 
 	var card_drawn = computer_deck.pop_front()
+	if card_drawn == null:
+		computer_defeat()
 	computer_hand.push_back(card_drawn)
 
 # Prepares sequential text strings
@@ -356,7 +360,7 @@ func resolve_cards():
 	elif computer_effects.redirect and player_effects.power_damage > 0:
 		computer_effects.power_damage = player_effects.power_damage
 		player_effects.power_damage = 0
-		battle_texts.append("Computer redirected " + String(player_effects.power_damage) + " at you!")
+		battle_texts.append("Computer redirected " + String(computer_effects.power_damage) + " at you!")
 
 	# Now, we can calculate damage
 	# Player damage dealt
@@ -403,6 +407,7 @@ func resolve_cards():
 		battle_texts.append("You took " + String(player_hp - new_player_hp) + " damage!")
 	elif new_player_hp > player_hp:
 		battle_texts.append("You gained " + String(new_player_hp - player_hp) + " HP!")
+		player_hp_ui.set_max(new_player_hp)
 	else:
 		battle_texts.append("You took no damage.")
 	player_hp = new_player_hp
@@ -447,3 +452,15 @@ func resolve_cards():
 			global.fight_result = "victory"
 		elif player_hp <=0 and computer_hp <= 0:
 			global.fight_result = "draw"
+
+func player_defeat():
+	global.fight_result = "defeat"
+	global.selected_card = null
+	computer_card = null
+	computer_card_selected = false
+
+func computer_defeat():
+	global.fight_result = "victory"
+	global.selected_card = null
+	computer_card = null
+	computer_card_selected = false

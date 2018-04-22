@@ -21,7 +21,9 @@ func _ready():
 
 		result_texture.set_texture(required_texture)
 
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
+func _on_playAgain_pressed():
+	global.player_selected_fighter = null
+	global._goto_scene("res://fighters/Fighters.tscn")
+
+func _on_quit_pressed():
+	get_tree().quit()

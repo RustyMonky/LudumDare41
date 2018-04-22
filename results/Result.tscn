@@ -1,9 +1,13 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://results/Result.gd" type="Script" id=1]
 [ext_resource path="res://assets/fonts/resultFont.tres" type="DynamicFont" id=2]
+[ext_resource path="res://assets/sprites/playAgain.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/playAgainHover.png" type="Texture" id=4]
+[ext_resource path="res://assets/sprites/quit.png" type="Texture" id=5]
+[ext_resource path="res://assets/sprites/quitHover.png" type="Texture" id=6]
 
-[node name="Result" type="Node"]
+[node name="Result" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -65,5 +69,59 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="playAgain" type="TextureButton" parent="GUI/resultTexture" index="1"]
+
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -64.0
+margin_top = -200.0
+margin_right = 64.0
+margin_bottom = -136.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 4 )
+_sections_unfolded = [ "Rect", "Textures" ]
+
+[node name="quit" type="TextureButton" parent="GUI/resultTexture" index="2"]
+
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -64.0
+margin_top = -100.0
+margin_right = 64.0
+margin_bottom = -36.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 5 )
+texture_hover = ExtResource( 6 )
+_sections_unfolded = [ "Rect", "Textures" ]
+
+[connection signal="pressed" from="GUI/resultTexture/playAgain" to="." method="_on_playAgain_pressed"]
+
+[connection signal="pressed" from="GUI/resultTexture/quit" to="." method="_on_quit_pressed"]
 
 

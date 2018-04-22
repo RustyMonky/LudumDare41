@@ -43,4 +43,8 @@ func _process(delta):
 		ready_button.show()
 		
 func _on_readyButton_pressed():
+	# Randomly select computer opponent
+	randomize()
+	var index = randi() % global.fighter_data.fighters.size()
+	global.computer_selected_fighter = global.fighter_data.fighters[index]
 	global._goto_scene("res://Game.tscn")
