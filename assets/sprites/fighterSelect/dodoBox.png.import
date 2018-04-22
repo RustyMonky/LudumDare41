@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/topUiPatch.png-652c3666e4290c071062e63217d2fb35.stex"
+path="res://.import/dodoBox.png-c988fa58ba9699254d924ab3af860ba5.stex"
 
 [deps]
 
-source_file="res://assets/sprites/topUiPatch.png"
-source_md5="49d6bcad1ed54545432c78d2c9529568"
+source_file="res://assets/sprites/fighterSelect/dodoBox.png"
+source_md5="44d855c729db719fd42f68e034e6c80a"
 
-dest_files=[ "res://.import/topUiPatch.png-652c3666e4290c071062e63217d2fb35.stex" ]
-dest_md5="91759b95ecd8fad2dbf529309e060d6f"
+dest_files=[ "res://.import/dodoBox.png-c988fa58ba9699254d924ab3af860ba5.stex" ]
+dest_md5="d3462268ecd5d6a83ceb9ff84c6faf0c"
 
 [params]
 

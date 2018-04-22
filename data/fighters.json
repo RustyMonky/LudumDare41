@@ -1,0 +1,28 @@
+{
+    "fighters": [
+        {
+            "name": "Dodocan",
+            "affinity": "random",
+            "normalTexture": "res://assets/sprites/fighterSelect/dodoBox.png",
+            "hoverTexture": "res://assets/sprites/fighterSelect/dodoBoxHover.png"
+        },
+        {
+            "name": "Butch the Vengeful Orc Ghost",
+            "affinity": "Brawn",
+            "normalTexture": "res://assets/sprites/fighterSelect/orcGhostBox.png",
+            "hoverTexture": "res://assets/sprites/fighterSelect/orcGhostBoxHover.png"
+        },
+        {
+            "name": "Jaffro the Demonic Acorn",
+            "affinity": "Power",
+            "normalTexture": "res://assets/sprites/fighterSelect/demonAcornBox.png",
+            "hoverTexture": "res://assets/sprites/fighterSelect/demonAcornBoxHover.png"
+        },
+        {
+            "name": "Rock-sensei",
+            "affinity": "Mind",
+            "normalTexture": "res://assets/sprites/fighterSelect/rockSenseiBox.png",
+            "hoverTexture": "res://assets/sprites/fighterSelect/rockSenseiBoxHover.png"
+        }
+    ]
+}

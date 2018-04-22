@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/topUiPatch.png-652c3666e4290c071062e63217d2fb35.stex"
+path="res://.import/background.png-49037be293fda77e86228f2829010024.stex"
 
 [deps]
 
-source_file="res://assets/sprites/topUiPatch.png"
-source_md5="49d6bcad1ed54545432c78d2c9529568"
+source_file="res://assets/sprites/fighterSelect/background.png"
+source_md5="db6429e7a9555fdd04a57c34364b0e74"
 
-dest_files=[ "res://.import/topUiPatch.png-652c3666e4290c071062e63217d2fb35.stex" ]
-dest_md5="91759b95ecd8fad2dbf529309e060d6f"
+dest_files=[ "res://.import/background.png-49037be293fda77e86228f2829010024.stex" ]
+dest_md5="99e90520c8d1076f7d8638fbf5b9e0c0"
 
 [params]
 

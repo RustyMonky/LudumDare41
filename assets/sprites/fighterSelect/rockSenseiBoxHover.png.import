@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/topUiPatch.png-652c3666e4290c071062e63217d2fb35.stex"
+path="res://.import/rockSenseiBoxHover.png-886b19f132e9f4dc7fc9104603dbbd58.stex"
 
 [deps]
 
-source_file="res://assets/sprites/topUiPatch.png"
-source_md5="49d6bcad1ed54545432c78d2c9529568"
+source_file="res://assets/sprites/fighterSelect/rockSenseiBoxHover.png"
+source_md5="bb9dae756b4afe168cdf0743817ff0b9"
 
-dest_files=[ "res://.import/topUiPatch.png-652c3666e4290c071062e63217d2fb35.stex" ]
-dest_md5="91759b95ecd8fad2dbf529309e060d6f"
+dest_files=[ "res://.import/rockSenseiBoxHover.png-886b19f132e9f4dc7fc9104603dbbd58.stex" ]
+dest_md5="b215d8be0214998d0e6f25d0b0d9b816"
 
 [params]
 

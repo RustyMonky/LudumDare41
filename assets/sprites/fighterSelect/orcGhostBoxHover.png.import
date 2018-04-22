@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/topUiPatch.png-652c3666e4290c071062e63217d2fb35.stex"
+path="res://.import/orcGhostBoxHover.png-f16e7b1137a9493efe3cc13fa7eb6ce6.stex"
 
 [deps]
 
-source_file="res://assets/sprites/topUiPatch.png"
-source_md5="49d6bcad1ed54545432c78d2c9529568"
+source_file="res://assets/sprites/fighterSelect/orcGhostBoxHover.png"
+source_md5="dbd802f125de0960b7dba4cff241fc83"
 
-dest_files=[ "res://.import/topUiPatch.png-652c3666e4290c071062e63217d2fb35.stex" ]
-dest_md5="91759b95ecd8fad2dbf529309e060d6f"
+dest_files=[ "res://.import/orcGhostBoxHover.png-f16e7b1137a9493efe3cc13fa7eb6ce6.stex" ]
+dest_md5="408efe31700a295228a19023b6271cd3"
 
 [params]
 

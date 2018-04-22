@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/topUiPatch.png-652c3666e4290c071062e63217d2fb35.stex"
+path="res://.import/demonAcorn.png-7ffc8134b632738f96e124054af5f4ac.stex"
 
 [deps]
 
-source_file="res://assets/sprites/topUiPatch.png"
-source_md5="49d6bcad1ed54545432c78d2c9529568"
+source_file="res://assets/sprites/fighterSelect/demonAcorn.png"
+source_md5="3bc5796a5dbb315ecdbb456bdf5e3f15"
 
-dest_files=[ "res://.import/topUiPatch.png-652c3666e4290c071062e63217d2fb35.stex" ]
-dest_md5="91759b95ecd8fad2dbf529309e060d6f"
+dest_files=[ "res://.import/demonAcorn.png-7ffc8134b632738f96e124054af5f4ac.stex" ]
+dest_md5="54a3a08e935fdfe0c436bc09ac25722d"
 
 [params]
 

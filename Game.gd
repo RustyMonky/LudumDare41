@@ -22,11 +22,6 @@ var player_deck = []
 var computer_hand = []
 var player_hand = []
 
-# Card JSON load
-var card_data = {}
-var card_data_2 = {} # TODO - REPLACE
-var card_file
-var card_file_text
 var card_scene
 
 # Text
@@ -54,14 +49,6 @@ var player_hp_ui
 var computer_hp_ui
 
 func _ready():
-	# Temporary load of card JSON data
-	card_file = File.new()
-	card_file.open("res://data/cards.json", File.READ)
-	card_file_text = card_file.get_as_text()
-	card_data = JSON.parse(card_file_text).get_result()
-	# TODO replace computer deck
-	card_data_2 = JSON.parse(card_file_text).get_result()
-
 	card_scene = preload("res://card/Card.tscn")
 
 	# Set starting HP values
@@ -79,13 +66,13 @@ func _ready():
 	# Randomized for now
 	while player_deck.size() < 15:
 		randomize()
-		var index = randi() % card_data.cards.size()
-		player_deck.append(card_data.cards[index])
+		var index = randi() % global.card_data.cards.size()
+		player_deck.append(global.card_data.cards[index])
 
 	while computer_deck.size() < 15:
 		randomize()
-		var index = randi() % card_data_2.cards.size()
-		computer_deck.append(card_data_2.cards[index])
+		var index = randi() % global.card_data_2.cards.size()
+		computer_deck.append(global.card_data_2.cards[index])
 
 	# Load hands
 	while player_hand.size() < 3:

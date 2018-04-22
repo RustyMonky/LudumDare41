@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/topUiPatch.png-652c3666e4290c071062e63217d2fb35.stex"
+path="res://.import/rockSensei.png-59945321b0a5b235df99656b35f07a72.stex"
 
 [deps]
 
-source_file="res://assets/sprites/topUiPatch.png"
-source_md5="49d6bcad1ed54545432c78d2c9529568"
+source_file="res://assets/sprites/fighterSelect/rockSensei.png"
+source_md5="7463430e0ed8a9a2ebc54795a13f4391"
 
-dest_files=[ "res://.import/topUiPatch.png-652c3666e4290c071062e63217d2fb35.stex" ]
-dest_md5="91759b95ecd8fad2dbf529309e060d6f"
+dest_files=[ "res://.import/rockSensei.png-59945321b0a5b235df99656b35f07a72.stex" ]
+dest_md5="f43918e89cf80a5049af2373397ab91b"
 
 [params]
 

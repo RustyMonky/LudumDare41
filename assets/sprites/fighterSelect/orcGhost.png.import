@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/topUiPatch.png-652c3666e4290c071062e63217d2fb35.stex"
+path="res://.import/orcGhost.png-84a88824f57abd65e2c731588364ed28.stex"
 
 [deps]
 
-source_file="res://assets/sprites/topUiPatch.png"
-source_md5="49d6bcad1ed54545432c78d2c9529568"
+source_file="res://assets/sprites/fighterSelect/orcGhost.png"
+source_md5="3a325d8a61a88b9374006a8c15b480b0"
 
-dest_files=[ "res://.import/topUiPatch.png-652c3666e4290c071062e63217d2fb35.stex" ]
-dest_md5="91759b95ecd8fad2dbf529309e060d6f"
+dest_files=[ "res://.import/orcGhost.png-84a88824f57abd65e2c731588364ed28.stex" ]
+dest_md5="0b3cea32679e469de77c05c0f6e1427f"
 
 [params]
 

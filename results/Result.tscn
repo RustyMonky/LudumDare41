@@ -3,7 +3,7 @@
 [ext_resource path="res://results/Result.gd" type="Script" id=1]
 [ext_resource path="res://assets/fonts/resultFont.tres" type="DynamicFont" id=2]
 
-[node name="Result" type="Node" index="0"]
+[node name="Result" type="Node"]
 
 script = ExtResource( 1 )
 
