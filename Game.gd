@@ -49,6 +49,8 @@ var draw_resolved = false
 
 # UI
 var player_hand_ui
+var player_hp_ui
+var computer_hp_ui
 
 func _ready():
 	# Temporary load of card JSON data
@@ -62,8 +64,11 @@ func _ready():
 	card_scene = preload("res://card/Card.tscn")
 
 	# Set starting HP values
-	$GUI/topUI/topBox/playerHp.set_text(String(player_hp))
-	$GUI/topUI/topBox/compHp.set_text(String(computer_hp))
+	player_hp_ui = $GUI/topUI/topBox/playerHp
+	computer_hp_ui = $GUI/topUI/topBox/compHp
+
+	player_hp_ui.set_value(player_hp)
+	computer_hp_ui.set_value(computer_hp)
 
 	player_hand_ui = $GUI/cardsPanel/cardMargins/playerCardBox
 
@@ -90,7 +95,7 @@ func _ready():
 	game_text.set_text("FIGHT")
 
 	select_timer = $SelectTimer
-	select_timer_label = $GUI/topUI/topBox/selectTimer
+	select_timer_label = $GUI/topUI/topBox/timer/selectTimer
 
 	set_process(true)
 
@@ -382,7 +387,7 @@ func resolve_cards():
 	else:
 		battle_texts.append("You took no damage.")
 	player_hp = new_player_hp
-	$GUI/topUI/topBox/playerHp.set_text(String(player_hp))
+	player_hp_ui.set_value(player_hp)
 
 	var new_computer_hp = computer_hp - player_damage_dealt + computer_effects.heal - computer_effects.recoil
 	if new_computer_hp < computer_hp:
@@ -392,7 +397,7 @@ func resolve_cards():
 	else:
 		battle_texts.append("Computer took no damage.")
 	computer_hp = new_computer_hp
-	$GUI/topUI/topBox/compHp.set_text(String(computer_hp))
+	computer_hp_ui.set_value(computer_hp)
 
 	# Check for card draw
 	if player_effects.draw > 0:
