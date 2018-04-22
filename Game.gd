@@ -1,4 +1,4 @@
-extends Node2D
+extends Node
 
 enum GAME_STATE {
 	DRAW,
@@ -70,7 +70,9 @@ func _ready():
 	player_hp_ui.set_value(player_hp)
 	computer_hp_ui.set_value(computer_hp)
 
-	player_hand_ui = $GUI/cardsPanel/cardMargins/playerCardBox
+	player_hand_ui = $GUI/cardsPanel/playerCardBox
+
+	# Fix margins...
 
 	# Load decks
 	# Randomized for now
