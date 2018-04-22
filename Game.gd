@@ -181,6 +181,10 @@ func player_draw():
 	var card = card_scene.instance()
 	card.data = card_drawn
 	player_hand_ui.add_child(card)
+	var normal_texture = load(card_drawn.normalTexture)
+	var hover_texture = load(card_drawn.hoverTexture)
+	card.set_normal_texture(normal_texture)
+	card.set_hover_texture(hover_texture)
 
 	return card_drawn
 

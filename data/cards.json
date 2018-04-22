@@ -7,7 +7,9 @@
                 "effectType": "Damage",
                 "effectValue": 3
             }],
-            "description": "Deal 3 phyiscal damage."
+            "description": "Deal 3 phyiscal damage.",
+            "normalTexture": "res://assets/sprites/cards/punch.png",
+            "hoverTexture": "res://assets/sprites/cards/punchHover.png"
         },
         {
             "name": "Guard",
@@ -16,7 +18,9 @@
                 "effectType": "Block",
                 "effectValue": 3
             }],
-            "description": "Negate 3 physical damage."
+            "description": "Negate 3 physical damage.",
+            "normalTexture": "res://assets/sprites/cards/block.png",
+            "hoverTexture": "res://assets/sprites/cards/blockHover.png"
         },
         {
             "name": "Eye Beams",
@@ -25,7 +29,9 @@
                 "effectType": "Damage",
                 "effectValue": 3
             }],
-            "description": "Deal 3 power damage. From your eyeballs!"
+            "description": "Deal 3 power damage. From your eyeballs!",
+            "normalTexture": "res://assets/sprites/cards/eyeBeam.png",
+            "hoverTexture": "res://assets/sprites/cards/eyeBeamHover.png"
         },
         {
             "name": "Think",
@@ -34,7 +40,9 @@
                 "effectType": "Draw",
                 "effectValue": 1
             }],
-            "description": "Draw a card."
+            "description": "Draw a card.",
+            "normalTexture": "res://assets/sprites/cards/think.png",
+            "hoverTexture": "res://assets/sprites/cards/thinkHover.png"
         },
         {
             "name": "Vengeful Lunge",
@@ -43,7 +51,9 @@
                 "effectType": "Counter",
                 "effectValue": null
             }],
-            "description": "Deal double the physical damage received."
+            "description": "Deal double the physical damage received.",
+            "normalTexture": "res://assets/sprites/cards/vengefulLunge.png",
+            "hoverTexture": "res://assets/sprites/cards/vengefulLungeHover.png"
         },
         {
             "name": "Dodge",
@@ -52,7 +62,9 @@
                 "effectType": "Evade",
                 "effectValue": 0.75
             }],
-            "description": "Completely dodge an incoming attack. Has a 75% chance."
+            "description": "Completely dodge an incoming attack. Has a 75% chance.",
+            "normalTexture": "res://assets/sprites/cards/dodge.png",
+            "hoverTexture": "res://assets/sprites/cards/dodgeHover.png"
         },
         {
             "name": "Shockwave",
@@ -64,7 +76,9 @@
                 "effectType": "Damage",
                 "effectValue": 2
             }],
-            "description": "Deal and block 2 damage with an explosive force around yourself."
+            "description": "Deal and block 2 damage with an explosive force around yourself.",
+            "normalTexture": "res://assets/sprites/cards/shockwave.png",
+            "hoverTexture": "res://assets/sprites/cards/shockwaveHover.png"
         },
         {
             "name": "Redirect",
@@ -73,7 +87,9 @@
                 "effectType": "Redirect",
                 "effectValue": null
             }],
-            "description": "Reflect an incoming power attack against its caster."
+            "description": "Reflect an incoming power attack against its caster.",
+            "normalTexture": "res://assets/sprites/cards/redirect.png",
+            "hoverTexture": "res://assets/sprites/cards/redirectHover.png"
         },
         {
             "name": "Demonic Pact",
@@ -88,7 +104,9 @@
                 "effectType": "Recoil",
                 "effectValue": 2
             }],
-            "description": "Draw 2 cards, deal 1 damage, take 2 damage."
+            "description": "Draw 2 cards, deal 1 damage, take 2 damage.",
+            "normalTexture": "res://assets/sprites/cards/demonicPact.png",
+            "hoverTexture": "res://assets/sprites/cards/demonicPactHover.png"
         },
         {
             "name": "Heal",
@@ -97,7 +115,9 @@
                 "effectType": "Heal",
                 "effectValue": 2
             }],
-            "description": "Recover 2 HP"
-        },
+            "description": "Recover 2 HP",
+            "normalTexture": "res://assets/sprites/cards/heal.png",
+            "hoverTexture": "res://assets/sprites/cards/healHover.png"
+        }
     ]
 }
