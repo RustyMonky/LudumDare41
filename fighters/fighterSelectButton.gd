@@ -9,3 +9,4 @@ func _ready():
 
 func _on_fighterSelectButton_pressed():
 	global.player_selected_fighter = data
+

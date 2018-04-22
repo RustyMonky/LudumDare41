@@ -4,25 +4,29 @@
             "name": "Dodocan",
             "affinity": "random",
             "normalTexture": "res://assets/sprites/fighterSelect/dodoBox.png",
-            "hoverTexture": "res://assets/sprites/fighterSelect/dodoBoxHover.png"
+            "hoverTexture": "res://assets/sprites/fighterSelect/dodoBoxHover.png",
+            "selectedTexture": "res://assets/sprites/fighterSelect/dodocan.png"
         },
         {
             "name": "Butch the Vengeful Orc Ghost",
             "affinity": "Brawn",
             "normalTexture": "res://assets/sprites/fighterSelect/orcGhostBox.png",
-            "hoverTexture": "res://assets/sprites/fighterSelect/orcGhostBoxHover.png"
+            "hoverTexture": "res://assets/sprites/fighterSelect/orcGhostBoxHover.png",
+            "selectedTexture": "res://assets/sprites/fighterSelect/orcGhost.png"
         },
         {
             "name": "Jaffro the Demonic Acorn",
             "affinity": "Power",
             "normalTexture": "res://assets/sprites/fighterSelect/demonAcornBox.png",
-            "hoverTexture": "res://assets/sprites/fighterSelect/demonAcornBoxHover.png"
+            "hoverTexture": "res://assets/sprites/fighterSelect/demonAcornBoxHover.png",
+            "selectedTexture": "res://assets/sprites/fighterSelect/demonAcorn.png"
         },
         {
             "name": "Rock-sensei",
             "affinity": "Mind",
             "normalTexture": "res://assets/sprites/fighterSelect/rockSenseiBox.png",
-            "hoverTexture": "res://assets/sprites/fighterSelect/rockSenseiBoxHover.png"
+            "hoverTexture": "res://assets/sprites/fighterSelect/rockSenseiBoxHover.png",
+            "selectedTexture": "res://assets/sprites/fighterSelect/rockSensei.png"
         }
     ]
 }
