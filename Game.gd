@@ -179,12 +179,22 @@ func _input(event):
 				current_game_state = SELECT
 				draw_resolved = false
 		elif text_index == null:
-			if current_game_state == PLAY and cards_resolved:
+			if global.fight_result != null:
+				global._goto_scene("res://results/Result.tscn")
+			elif current_game_state == PLAY and cards_resolved:
 				current_game_state = DRAW
 				cards_resolved = false
 
 # Draws a card for the player
 func player_draw():
+	# If deck is empty, we lose feelsbadman
+	if player_deck.size() == 0:
+		global.fight_result = "defeat"
+		global.selected_card = null
+		computer_card = null
+		computer_card_selected = false
+		prep_text(["Your deck has no more cards!"])
+
 	var card_drawn = player_deck.pop_front()
 	player_hand.push_back(card_drawn)
 
@@ -201,6 +211,14 @@ func player_draw():
 
 # Draws a card for the computer
 func computer_draw():
+	# If deck is empty, computer loses feelsgudman
+	if computer_deck.size() == 0:
+		global.fight_result = "victory"
+		global.selected_card = null
+		computer_card = null
+		computer_card_selected = false
+		prep_text(["Computer deck has no more cards!"])
+
 	var card_drawn = computer_deck.pop_front()
 	computer_hand.push_back(card_drawn)
 
@@ -428,3 +446,11 @@ func resolve_cards():
 	computer_card = null
 	computer_card_selected = false
 	cards_resolved = true
+
+	if player_hp <= 0 or computer_hp <= 0:
+		if player_hp <=0 and computer_hp > 0:
+			global.fight_result = "defeat"
+		elif player_hp >0 and computer_hp <= 0:
+			global.fight_result = "victory"
+		elif player_hp <=0 and computer_hp <= 0:
+			global.fight_result = "draw"
