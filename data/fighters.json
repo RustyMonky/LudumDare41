@@ -5,28 +5,32 @@
             "affinity": "random",
             "normalTexture": "res://assets/sprites/fighterSelect/dodoBox.png",
             "hoverTexture": "res://assets/sprites/fighterSelect/dodoBoxHover.png",
-            "selectedTexture": "res://assets/sprites/fighterSelect/dodocan.png"
+            "selectedTexture": "res://assets/sprites/fighterSelect/dodocan.png",
+            "largeTexture": "res://assets/sprites/fighterSelect/dodocanLarge.png"
         },
         {
             "name": "Butch the Vengeful Orc Ghost",
             "affinity": "Brawn",
             "normalTexture": "res://assets/sprites/fighterSelect/orcGhostBox.png",
             "hoverTexture": "res://assets/sprites/fighterSelect/orcGhostBoxHover.png",
-            "selectedTexture": "res://assets/sprites/fighterSelect/orcGhost.png"
+            "selectedTexture": "res://assets/sprites/fighterSelect/orcGhost.png",
+            "largeTexture": "res://assets/sprites/fighterSelect/orcGhostLarge.png"
         },
         {
             "name": "Jaffro the Demonic Acorn",
             "affinity": "Power",
             "normalTexture": "res://assets/sprites/fighterSelect/demonAcornBox.png",
             "hoverTexture": "res://assets/sprites/fighterSelect/demonAcornBoxHover.png",
-            "selectedTexture": "res://assets/sprites/fighterSelect/demonAcorn.png"
+            "selectedTexture": "res://assets/sprites/fighterSelect/demonAcorn.png",
+            "largeTexture": "res://assets/sprites/fighterSelect/demonAcornLarge.png"
         },
         {
             "name": "Rock-sensei",
             "affinity": "Mind",
             "normalTexture": "res://assets/sprites/fighterSelect/rockSenseiBox.png",
             "hoverTexture": "res://assets/sprites/fighterSelect/rockSenseiBoxHover.png",
-            "selectedTexture": "res://assets/sprites/fighterSelect/rockSensei.png"
+            "selectedTexture": "res://assets/sprites/fighterSelect/rockSensei.png",
+            "largeTexture": "res://assets/sprites/fighterSelect/rockSenseiLarge.png"
         }
     ]
 }

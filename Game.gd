@@ -48,6 +48,8 @@ var player_hand_ui
 var player_hp_ui
 var computer_hp_ui
 
+var fighter_sprite = null
+
 func _ready():
 	card_scene = preload("res://card/Card.tscn")
 
@@ -59,6 +61,10 @@ func _ready():
 	computer_hp_ui.set_value(computer_hp)
 
 	player_hand_ui = $GUI/cardsPanel/playerCardBox
+
+	fighter_sprite = $GUI/fighterContainer/fighterSprite
+	var sprite_to_load = load(global.player_selected_fighter.largeTexture)
+	fighter_sprite.set_texture(sprite_to_load)
 
 	# Fix margins...
 
