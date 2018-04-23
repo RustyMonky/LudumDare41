@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://results/Result.gd" type="Script" id=1]
 [ext_resource path="res://assets/fonts/resultFont.tres" type="DynamicFont" id=2]
@@ -6,8 +6,10 @@
 [ext_resource path="res://assets/sprites/playAgainHover.png" type="Texture" id=4]
 [ext_resource path="res://assets/sprites/quit.png" type="Texture" id=5]
 [ext_resource path="res://assets/sprites/quitHover.png" type="Texture" id=6]
+[ext_resource path="res://assets/music/victory.wav" type="AudioStream" id=7]
+[ext_resource path="res://assets/music/defeat.wav" type="AudioStream" id=8]
 
-[node name="Result" type="Node" index="0"]
+[node name="Result" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -72,14 +74,14 @@ _sections_unfolded = [ "Rect", "custom_fonts" ]
 
 [node name="playAgain" type="TextureButton" parent="GUI/resultTexture" index="1"]
 
-anchor_left = 0.5
+anchor_left = 0.0
 anchor_top = 1.0
-anchor_right = 0.5
+anchor_right = 0.0
 anchor_bottom = 1.0
-margin_left = -64.0
-margin_top = -200.0
-margin_right = 64.0
-margin_bottom = -136.0
+margin_left = 64.0
+margin_top = -128.0
+margin_right = 192.0
+margin_bottom = -64.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -97,14 +99,14 @@ _sections_unfolded = [ "Rect", "Textures" ]
 
 [node name="quit" type="TextureButton" parent="GUI/resultTexture" index="2"]
 
-anchor_left = 0.5
+anchor_left = 1.0
 anchor_top = 1.0
-anchor_right = 0.5
+anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -64.0
-margin_top = -100.0
-margin_right = 64.0
-margin_bottom = -36.0
+margin_left = -192.0
+margin_top = -128.0
+margin_right = -64.0
+margin_bottom = -64.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -119,6 +121,28 @@ group = null
 texture_normal = ExtResource( 5 )
 texture_hover = ExtResource( 6 )
 _sections_unfolded = [ "Rect", "Textures" ]
+
+[node name="node2d" type="Node2D" parent="." index="1"]
+
+[node name="victoryStream" type="AudioStreamPlayer2D" parent="node2d" index="0"]
+
+stream = ExtResource( 7 )
+volume_db = 5.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[node name="defeatStream" type="AudioStreamPlayer2D" parent="node2d" index="1"]
+
+stream = ExtResource( 8 )
+volume_db = 5.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
 
 [connection signal="pressed" from="GUI/resultTexture/playAgain" to="." method="_on_playAgain_pressed"]
 

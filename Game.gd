@@ -48,6 +48,9 @@ var player_hand_ui
 var player_hp_ui
 var computer_hp_ui
 
+var player_deck_ui
+var computer_deck_ui
+
 var player_sprite = null
 var computer_sprite = null
 
@@ -62,6 +65,9 @@ func _ready():
 	computer_hp_ui.set_value(computer_hp)
 
 	player_hand_ui = $GUI/cardsPanel/playerCardBox
+
+	player_deck_ui = $GUI/fighterContainer/playerDeck/playerDeckCount
+	computer_deck_ui = $GUI/fighterContainer/computerDeck/computerDeckCount
 
 	player_sprite = $GUI/fighterContainer/playerSprite
 	var player_sprite_to_load = load(global.player_selected_fighter.largeTexture)
@@ -98,6 +104,9 @@ func _ready():
 
 	select_timer = $SelectTimer
 	select_timer_label = $GUI/topUI/topBox/timer/selectTimer
+
+	player_deck_ui.set_text(String(player_deck.size()))
+	computer_deck_ui.set_text(String(computer_deck.size()))
 
 	set_process(true)
 
@@ -190,6 +199,7 @@ func player_draw():
 	if player_deck.size() == 0:
 		prep_text(["Your deck has no more cards!"])
 		player_defeat()
+		return
 
 	var card_drawn = player_deck.pop_front()
 	if card_drawn == null:
@@ -205,6 +215,8 @@ func player_draw():
 	card.set_normal_texture(normal_texture)
 	card.set_hover_texture(hover_texture)
 
+	player_deck_ui.set_text(String(player_deck.size()))
+
 	return card_drawn
 
 # Draws a card for the computer
@@ -213,11 +225,14 @@ func computer_draw():
 	if computer_deck.size() == 0:
 		prep_text(["Computer deck has no more cards!"])
 		computer_defeat()
+		return
 
 	var card_drawn = computer_deck.pop_front()
 	if card_drawn == null:
 		computer_defeat()
 	computer_hand.push_back(card_drawn)
+
+	computer_deck_ui.set_text(String(computer_deck.size()))
 
 # Prepares sequential text strings
 func prep_text(texts):

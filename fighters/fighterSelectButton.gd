@@ -8,5 +8,6 @@ func _ready():
 	pass
 
 func _on_fighterSelectButton_pressed():
+	$clickStream.play()
 	global.player_selected_fighter = data
 

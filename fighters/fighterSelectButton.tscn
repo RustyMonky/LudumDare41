@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://fighters/fighterSelectButton.gd" type="Script" id=1]
+[ext_resource path="res://assets/music/click.tres" type="AudioStream" id=2]
 
 [node name="fighterSelectButton" type="TextureButton"]
 
@@ -23,6 +24,16 @@ shortcut = null
 group = null
 script = ExtResource( 1 )
 _sections_unfolded = [ "Textures" ]
+
+[node name="clickStream" type="AudioStreamPlayer2D" parent="." index="0"]
+
+stream = ExtResource( 2 )
+volume_db = 5.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
 
 [connection signal="pressed" from="." to="." method="_on_fighterSelectButton_pressed"]
 

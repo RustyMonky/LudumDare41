@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/bumblebeeLoop.wav-e13284b755c0f1e8e2a5848a5b44301f.sample"
+
+[deps]
+
+source_file="res://assets/music/bumblebeeLoop.wav"
+source_md5="48e2ba865f5b8d31ef1db4f173e91e26"
+
+dest_files=[ "res://.import/bumblebeeLoop.wav-e13284b755c0f1e8e2a5848a5b44301f.sample" ]
+dest_md5="82249ec595760b7f5552f0293b7f7853"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

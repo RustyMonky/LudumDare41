@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://fighters/Fighters.gd" type="Script" id=1]
 [ext_resource path="res://assets/sprites/topUiPatch.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://assets/sprites/readyButton.png" type="Texture" id=5]
 [ext_resource path="res://assets/sprites/readyButtonHover.png" type="Texture" id=6]
 [ext_resource path="res://assets/fonts/selectFighterPanelFont.tres" type="DynamicFont" id=7]
+[ext_resource path="res://assets/music/kickAss.wav" type="AudioStream" id=8]
 
 [node name="Node" type="Node"]
 
@@ -201,7 +202,6 @@ _sections_unfolded = [ "Rect", "Textures", "Visibility" ]
 
 [node name="selectedFighterContainer" type="Container" parent="GUI/Container/VBoxContainer" index="2"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -254,7 +254,6 @@ _sections_unfolded = [ "Margin", "Rect" ]
 
 [node name="selectedFighterPatch" type="NinePatchRect" parent="GUI/Container/VBoxContainer/selectedFighterContainer/HBoxContainer/Container" index="0"]
 
-editor/display_folded = true
 visible = false
 anchor_left = 1.0
 anchor_top = 0.5
@@ -317,6 +316,18 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 stretch_mode = 3
 _sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Mouse", "Rect" ]
+
+[node name="Node2D" type="Node2D" parent="." index="1"]
+
+[node name="menuMusic" type="AudioStreamPlayer2D" parent="Node2D" index="0"]
+
+stream = ExtResource( 8 )
+volume_db = 5.0
+autoplay = true
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
 
 [connection signal="pressed" from="GUI/Container/VBoxContainer/fighterSelectContainer/selectBackground/readyButton" to="." method="_on_readyButton_pressed"]
 

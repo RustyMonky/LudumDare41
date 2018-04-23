@@ -7,6 +7,7 @@ func _ready():
 
 func _on_Card_pressed():
 	global.selected_card = data
+	$clickStream.play()
 	self.queue_free()
 
 func _on_Card_mouse_entered():
