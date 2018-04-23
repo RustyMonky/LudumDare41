@@ -16,7 +16,7 @@
 [ext_resource path="res://assets/music/title.wav" type="AudioStream" id=14]
 [ext_resource path="res://assets/music/click.wav" type="AudioStream" id=15]
 
-[node name="Node" type="Node"]
+[node name="Node" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -191,7 +191,7 @@ size_flags_vertical = 4
 custom_fonts/font = ExtResource( 11 )
 text = "Credits
 
-All spritework, programming code, and character concepts were created by mysely.
+All spritework, programming code, and character concepts were created by myself.
 
 Game built with the Godot Engine.
 Sprites built within Aseprite.
