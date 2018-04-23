@@ -116,8 +116,10 @@ func _process(delta):
 	if current_game_state == DRAW and not draw_resolved:
 		# If draw step, both players draw a card
 		var new_card = player_draw()
-		computer_draw()
-		prep_text(["You drew " + new_card.name + "!"])
+		var computer_new_card = computer_draw()
+
+		if new_card != null:
+			prep_text(["You drew " + new_card.name + "!"])
 		draw_resolved = true
 
 	elif current_game_state == SELECT:
@@ -236,6 +238,8 @@ func computer_draw():
 	computer_hand.push_back(card_drawn)
 
 	computer_deck_ui.set_text(String(computer_deck.size()))
+
+	return card_drawn
 
 # Prepares sequential text strings
 func prep_text(texts):
