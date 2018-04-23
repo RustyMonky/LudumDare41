@@ -186,6 +186,9 @@ func _input(event):
 			if current_game_state == DRAW and draw_resolved:
 				current_game_state = SELECT
 				draw_resolved = false
+			elif current_game_state == PLAY and cards_resolved:
+				current_game_state = DRAW
+				cards_resolved = false
 		elif text_index == null:
 			if global.fight_result != null:
 				global._goto_scene("res://results/Result.tscn")

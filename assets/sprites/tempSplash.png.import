@@ -7,10 +7,10 @@ path="res://.import/tempSplash.png-531de75a1a0cbd81f00626046fe25c02.stex"
 [deps]
 
 source_file="res://assets/sprites/tempSplash.png"
-source_md5="f1980f591a26d1a971f6b70014a65bbe"
+source_md5="28937fc02055477c6e56584519b40560"
 
 dest_files=[ "res://.import/tempSplash.png-531de75a1a0cbd81f00626046fe25c02.stex" ]
-dest_md5="530118d58bb4d3229200efa12d953be7"
+dest_md5="5f3d31ea85e6ee32350da5f60215b950"
 
 [params]
 
