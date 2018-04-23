@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Title.gd" type="Script" id=1]
 [ext_resource path="res://assets/sprites/tempSplash.png" type="Texture" id=2]
@@ -8,9 +8,14 @@
 [ext_resource path="res://assets/sprites/creditsHover.png" type="Texture" id=6]
 [ext_resource path="res://assets/sprites/quit.png" type="Texture" id=7]
 [ext_resource path="res://assets/sprites/quitHover.png" type="Texture" id=8]
-[ext_resource path="res://assets/music/title.tres" type="AudioStream" id=9]
+[ext_resource path="res://assets/sprites/topUiPatch.png" type="Texture" id=9]
+[ext_resource path="res://assets/fonts/creditsFont.tres" type="DynamicFont" id=10]
+[ext_resource path="res://assets/sprites/back.png" type="Texture" id=11]
+[ext_resource path="res://assets/sprites/backHover.png" type="Texture" id=12]
+[ext_resource path="res://assets/music/title.wav" type="AudioStream" id=13]
+[ext_resource path="res://assets/music/click.wav" type="AudioStream" id=14]
 
-[node name="Node" type="Node" index="0"]
+[node name="Node" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -32,6 +37,7 @@ _sections_unfolded = [ "Rect" ]
 
 [node name="splash" type="TextureRect" parent="GUI" index="0"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0
@@ -119,13 +125,105 @@ texture_normal = ExtResource( 7 )
 texture_hover = ExtResource( 8 )
 _sections_unfolded = [ "Textures" ]
 
+[node name="credits" type="NinePatchRect" parent="GUI" index="1"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 600.0
+margin_bottom = 500.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 9 )
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+_sections_unfolded = [ "Patch Margin", "Rect", "Visibility" ]
+
+[node name="creditsText" type="Label" parent="GUI/credits" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 600.0
+margin_bottom = 380.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 10 )
+text = "Credits
+
+All spritework, programming code, and character concepts were created by mysely.
+
+Game built with the Godot Engine.
+Sprites built within Aseprite.
+
+Music (all found on opengameart.org):
+- \"Kick their asses\" and \"Action Track\" by Alexandr Zhelanov
+- \"Bumblebee\" by Nikolai Rimsky-Korsakov, arranged and looped by by Johan Brodd
+- \"Steppin Up!\" Dan Knoflicek
+- \"Icy Game Over\" by Sudocolon"
+autowrap = true
+clip_text = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Margin", "Rect", "custom_fonts" ]
+
+[node name="back" type="TextureButton" parent="GUI/credits" index="1"]
+
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -20.0
+margin_top = -40.0
+margin_right = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 11 )
+texture_hover = ExtResource( 12 )
+_sections_unfolded = [ "Textures" ]
+
 [node name="Node2D" type="Node2D" parent="." index="1"]
 
-[node name="titleStream" type="AudioStreamPlayer2D" parent="Node2D" index="0"]
+[node name="music" type="AudioStreamPlayer2D" parent="Node2D" index="0"]
 
-stream = ExtResource( 9 )
+stream = ExtResource( 13 )
 volume_db = 5.0
 autoplay = true
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[node name="click" type="AudioStreamPlayer2D" parent="Node2D" index="1"]
+
+stream = ExtResource( 14 )
+volume_db = 0.0
+autoplay = false
 max_distance = 2000.0
 attenuation = 1.0
 bus = "Master"
@@ -136,5 +234,7 @@ area_mask = 1
 [connection signal="pressed" from="GUI/splash/credits" to="." method="_on_credits_pressed"]
 
 [connection signal="pressed" from="GUI/splash/quit" to="." method="_on_quit_pressed"]
+
+[connection signal="pressed" from="GUI/credits/back" to="." method="_on_back_pressed"]
 
 

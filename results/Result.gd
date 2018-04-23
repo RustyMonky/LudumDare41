@@ -2,10 +2,12 @@ extends Node
 
 var result_texture
 var result_text
+var click
 
 func _ready():
 	result_texture = $GUI/resultTexture
 	result_text = $GUI/resultTexture/resultText
+	click = $node2d/click
 
 	if global.fight_result != null:
 		var required_texture
@@ -28,9 +30,11 @@ func _ready():
 		result_texture.set_texture(required_texture)
 
 func _on_playAgain_pressed():
+	click.play()
 	global.player_selected_fighter = null
 	global.fight_result = null
 	global._goto_scene("res://fighters/Fighters.tscn")
 
 func _on_quit_pressed():
+	click.play()
 	get_tree().quit()

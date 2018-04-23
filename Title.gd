@@ -1,15 +1,28 @@
 extends Node
 
+var splash
+var credits
+var click
+
 func _ready():
-	# Called every time the node is added to the scene.
-	# Initialization here
-	pass
+	splash = $GUI/splash
+	credits = $GUI/credits
+	click = $Node2D/click
 
 func _on_play_pressed():
-	global._goto_scene("res://fighters/Fighters.tscn")
+	click.play()
+	global._goto_scene("res://how-to/HowTo.tscn")
 
 func _on_credits_pressed():
-	pass # replace with function body
+	click.play()
+	splash.hide()
+	credits.show()
 
 func _on_quit_pressed():
+	click.play()
 	get_tree().quit()
+
+func _on_back_pressed():
+	click.play()
+	splash.show()
+	credits.hide()
