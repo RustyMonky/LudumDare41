@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://assets/sprites/hp/under.png" type="Texture" id=2]
@@ -10,9 +10,10 @@
 [ext_resource path="res://assets/sprites/labelUiPatch.png" type="Texture" id=8]
 [ext_resource path="res://assets/fonts/gameTextFont.tres" type="DynamicFont" id=9]
 [ext_resource path="res://assets/sprites/deck.png" type="Texture" id=10]
-[ext_resource path="res://assets/music/bumblebeeLoop.wav" type="AudioStream" id=11]
+[ext_resource path="res://assets/sprites/tempSplash.png" type="Texture" id=11]
+[ext_resource path="res://assets/music/bumblebeeLoop.wav" type="AudioStream" id=12]
 
-[node name="Game" type="Node"]
+[node name="Game" type="Node" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Anchor", "Margin", "Rect", "Transform", "Z Index" ]
@@ -384,6 +385,13 @@ size_flags_vertical = 1
 alignment = 1
 _sections_unfolded = [ "Anchor", "Margin", "Mouse", "Rect" ]
 
+[node name="background" type="Sprite" parent="GUI" index="3"]
+
+show_behind_parent = true
+texture = ExtResource( 11 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform", "Visibility" ]
+
 [node name="SelectTimer" type="Timer" parent="." index="1"]
 
 process_mode = 1
@@ -395,7 +403,7 @@ autostart = false
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="node2d" index="0"]
 
-stream = ExtResource( 11 )
+stream = ExtResource( 12 )
 volume_db = 5.0
 autoplay = true
 max_distance = 2000.0
