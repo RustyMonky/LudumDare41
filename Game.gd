@@ -429,7 +429,8 @@ func resolve_cards():
 		battle_texts.append("You took " + String(player_hp - new_player_hp) + " damage!")
 	elif new_player_hp > player_hp:
 		battle_texts.append("You gained " + String(new_player_hp - player_hp) + " HP!")
-		player_hp_ui.set_max(new_player_hp)
+		if new_player_hp > 10:
+			player_hp_ui.set_max(new_player_hp)
 	else:
 		battle_texts.append("You took no damage.")
 	player_hp = new_player_hp
