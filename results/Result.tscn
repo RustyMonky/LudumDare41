@@ -2,13 +2,15 @@
 
 [ext_resource path="res://results/Result.gd" type="Script" id=1]
 [ext_resource path="res://assets/fonts/resultFont.tres" type="DynamicFont" id=2]
-[ext_resource path="res://assets/sprites/playAgain.png" type="Texture" id=3]
-[ext_resource path="res://assets/sprites/playAgainHover.png" type="Texture" id=4]
-[ext_resource path="res://assets/sprites/quit.png" type="Texture" id=5]
-[ext_resource path="res://assets/sprites/quitHover.png" type="Texture" id=6]
+[ext_resource path="res://assets/sprites/buttons/playAgain.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/buttons/playAgainHover.png" type="Texture" id=4]
+[ext_resource path="res://assets/sprites/buttons/quit.png" type="Texture" id=5]
+[ext_resource path="res://assets/sprites/buttons/quitHover.png" type="Texture" id=6]
 [ext_resource path="res://assets/music/victory.wav" type="AudioStream" id=7]
 [ext_resource path="res://assets/music/defeat.wav" type="AudioStream" id=8]
 [ext_resource path="res://assets/music/click.wav" type="AudioStream" id=9]
+
+
 
 [node name="Result" type="Node"]
 

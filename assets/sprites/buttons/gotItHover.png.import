@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/back.png-73d0d71f353725c6ba9218045b96399b.stex"
+path="res://.import/gotItHover.png-98a3b9f9311c26391f16da3612db7f1a.stex"
 
 [deps]
 
-source_file="res://assets/sprites/back.png"
-source_md5="d4b5ebf73aca830de54e11acd9cd6f8e"
+source_file="res://assets/sprites/buttons/gotItHover.png"
+source_md5="f8ac183cee6b5a602b3c30573d6cfb6d"
 
-dest_files=[ "res://.import/back.png-73d0d71f353725c6ba9218045b96399b.stex" ]
-dest_md5="e553880bdef58174ad2e2660410b91a6"
+dest_files=[ "res://.import/gotItHover.png-98a3b9f9311c26391f16da3612db7f1a.stex" ]
+dest_md5="215cbffd752f92415840ffb431e941a2"
 
 [params]
 

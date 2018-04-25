@@ -3,9 +3,10 @@
 [ext_resource path="res://how-to/HowTo.gd" type="Script" id=1]
 [ext_resource path="res://assets/sprites/labelUiPatch.png" type="Texture" id=2]
 [ext_resource path="res://assets/fonts/creditsFont.tres" type="DynamicFont" id=3]
-[ext_resource path="res://assets/sprites/gotIt.png" type="Texture" id=4]
-[ext_resource path="res://assets/sprites/gotItHover.png" type="Texture" id=5]
+[ext_resource path="res://assets/sprites/buttons/gotIt.png" type="Texture" id=4]
+[ext_resource path="res://assets/sprites/buttons/gotItHover.png" type="Texture" id=5]
 [ext_resource path="res://assets/music/click.wav" type="AudioStream" id=6]
+
 
 [node name="Node" type="Node"]
 

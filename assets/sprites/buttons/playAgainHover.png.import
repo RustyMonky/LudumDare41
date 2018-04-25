@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/readyButtonHover.png-2b123786fe0cf81658d474c7587db60c.stex"
+path="res://.import/playAgainHover.png-61e8b461501a7fabae1d9cf2295a305d.stex"
 
 [deps]
 
-source_file="res://assets/sprites/readyButtonHover.png"
-source_md5="47ad360be467fc891e4d5e3634425368"
+source_file="res://assets/sprites/buttons/playAgainHover.png"
+source_md5="f18940396e6e1c6ca6a2384ee454d18d"
 
-dest_files=[ "res://.import/readyButtonHover.png-2b123786fe0cf81658d474c7587db60c.stex" ]
-dest_md5="51cbb881ed0f7253e595cbe4b07bec8e"
+dest_files=[ "res://.import/playAgainHover.png-61e8b461501a7fabae1d9cf2295a305d.stex" ]
+dest_md5="75306c73a1bcf5e70813933f4def5467"
 
 [params]
 

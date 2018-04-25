@@ -2,14 +2,14 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/readyButton.png-85bda1f912d17e11626ddc996c0d7352.stex"
+path="res://.import/readyButton.png-254b2054fa9d28981bfab5455a851389.stex"
 
 [deps]
 
-source_file="res://assets/sprites/readyButton.png"
+source_file="res://assets/sprites/buttons/readyButton.png"
 source_md5="905b3d9ff3c1a45e8ff6d2bc6ad0e558"
 
-dest_files=[ "res://.import/readyButton.png-85bda1f912d17e11626ddc996c0d7352.stex" ]
+dest_files=[ "res://.import/readyButton.png-254b2054fa9d28981bfab5455a851389.stex" ]
 dest_md5="ec78eb9dd004685367a000ca880b5c61"
 
 [params]

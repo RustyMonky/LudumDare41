@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/backHover.png-b2020b58b71473c5efba245b6317b8f3.stex"
+path="res://.import/back.png-0fb866637d9163e6d5c3c4fc182b395a.stex"
 
 [deps]
 
-source_file="res://assets/sprites/backHover.png"
-source_md5="e30120fc8f5597d37952ccb32c0dc103"
+source_file="res://assets/sprites/buttons/back.png"
+source_md5="d4b5ebf73aca830de54e11acd9cd6f8e"
 
-dest_files=[ "res://.import/backHover.png-b2020b58b71473c5efba245b6317b8f3.stex" ]
-dest_md5="3f198dc0fc4bd4f2d6b3e2c2dea86bfc"
+dest_files=[ "res://.import/back.png-0fb866637d9163e6d5c3c4fc182b395a.stex" ]
+dest_md5="e553880bdef58174ad2e2660410b91a6"
 
 [params]
 

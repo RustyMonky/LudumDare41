@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/playAgain.png-f7b941b2dfe751318ce806d046119894.stex"
+path="res://.import/start.png-542531ebe89776de71da3a68163efd8f.stex"
 
 [deps]
 
-source_file="res://assets/sprites/playAgain.png"
-source_md5="ee4d37772fc1e3b65d03d15fe51d1549"
+source_file="res://assets/sprites/buttons/start.png"
+source_md5="68fe1f23ca1ea4cb0a408b40cf6c38c2"
 
-dest_files=[ "res://.import/playAgain.png-f7b941b2dfe751318ce806d046119894.stex" ]
-dest_md5="8dd144200d4f5b9c277ec45dd627c4b9"
+dest_files=[ "res://.import/start.png-542531ebe89776de71da3a68163efd8f.stex" ]
+dest_md5="7d6892fd13261e63c6aa832283070aa5"
 
 [params]
 

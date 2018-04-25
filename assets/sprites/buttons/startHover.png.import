@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/start.png-395ce745c03080f1b50bc7ed4737aad2.stex"
+path="res://.import/startHover.png-c0f96d7d231c0bff8fc1e321f988903e.stex"
 
 [deps]
 
-source_file="res://assets/sprites/start.png"
-source_md5="68fe1f23ca1ea4cb0a408b40cf6c38c2"
+source_file="res://assets/sprites/buttons/startHover.png"
+source_md5="4da1c9ab690efecf9214c0bb717649d4"
 
-dest_files=[ "res://.import/start.png-395ce745c03080f1b50bc7ed4737aad2.stex" ]
-dest_md5="7d6892fd13261e63c6aa832283070aa5"
+dest_files=[ "res://.import/startHover.png-c0f96d7d231c0bff8fc1e321f988903e.stex" ]
+dest_md5="5fd1ee8b57745bd6da588ad88b5aa1df"
 
 [params]
 
