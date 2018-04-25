@@ -7,10 +7,10 @@ path="res://.import/creditsHover.png-bf224da141731237eb1ca16039b56e29.stex"
 [deps]
 
 source_file="res://assets/sprites/buttons/creditsHover.png"
-source_md5="588072fec8c4d622626836a5e7fe50e0"
+source_md5="d3d5eae01cd47e4f97a61d815d854a05"
 
 dest_files=[ "res://.import/creditsHover.png-bf224da141731237eb1ca16039b56e29.stex" ]
-dest_md5="ff269c2894a19c838b46e5e87b1a0aca"
+dest_md5="114158072d8802d664e2620515250b2c"
 
 [params]
 

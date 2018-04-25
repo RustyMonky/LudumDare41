@@ -9,8 +9,6 @@
 [ext_resource path="res://assets/fonts/selectFighterPanelFont.tres" type="DynamicFont" id=7]
 [ext_resource path="res://assets/music/kickAss.wav" type="AudioStream" id=8]
 
-
-
 [node name="Node" type="Node"]
 
 script = ExtResource( 1 )
@@ -321,15 +319,13 @@ _sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Mouse", "Rect" ]
 
 [node name="Node2D" type="Node2D" parent="." index="1"]
 
-[node name="menuMusic" type="AudioStreamPlayer2D" parent="Node2D" index="0"]
+[node name="menuMusic" type="AudioStreamPlayer" parent="Node2D" index="0"]
 
 stream = ExtResource( 8 )
 volume_db = 5.0
 autoplay = true
-max_distance = 2000.0
-attenuation = 1.0
+mix_target = 0
 bus = "Master"
-area_mask = 1
 
 [connection signal="pressed" from="GUI/Container/VBoxContainer/fighterSelectContainer/selectBackground/readyButton" to="." method="_on_readyButton_pressed"]
 

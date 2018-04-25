@@ -7,10 +7,10 @@ path="res://.import/credits.png-5fa9bfa7aada177352c20e7b96deecdd.stex"
 [deps]
 
 source_file="res://assets/sprites/buttons/credits.png"
-source_md5="6992ca77d97d98dd0d1d650569eeb5f3"
+source_md5="5ca9450a7264364da15b8a67b530876c"
 
 dest_files=[ "res://.import/credits.png-5fa9bfa7aada177352c20e7b96deecdd.stex" ]
-dest_md5="70c3f1386ff1c03f9ec907de5772dfc0"
+dest_md5="9bbadee21879169c937876f19fe2b94b"
 
 [params]
 

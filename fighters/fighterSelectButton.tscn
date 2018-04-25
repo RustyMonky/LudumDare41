@@ -25,15 +25,13 @@ group = null
 script = ExtResource( 1 )
 _sections_unfolded = [ "Textures" ]
 
-[node name="clickStream" type="AudioStreamPlayer2D" parent="." index="0"]
+[node name="clickStream" type="AudioStreamPlayer" parent="." index="0"]
 
 stream = ExtResource( 2 )
 volume_db = 5.0
 autoplay = false
-max_distance = 2000.0
-attenuation = 1.0
+mix_target = 0
 bus = "Master"
-area_mask = 1
 
 [connection signal="pressed" from="." to="." method="_on_fighterSelectButton_pressed"]
 

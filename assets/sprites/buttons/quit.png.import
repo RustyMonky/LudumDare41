@@ -7,10 +7,10 @@ path="res://.import/quit.png-1274a98681591d5f144e909a8ddaa1ee.stex"
 [deps]
 
 source_file="res://assets/sprites/buttons/quit.png"
-source_md5="5f23ac069d26b9c9fdfc617bfb89ad58"
+source_md5="b75e9e2d9f7006fc9ce719bf73112e09"
 
 dest_files=[ "res://.import/quit.png-1274a98681591d5f144e909a8ddaa1ee.stex" ]
-dest_md5="842fda5a1f88792596f2e9150c3f3fec"
+dest_md5="65e1a8e630c3ae0fca0756c5590394aa"
 
 [params]
 

@@ -7,10 +7,10 @@ path="res://.import/quitHover.png-266c700aa57942d6876009ebb4333c1c.stex"
 [deps]
 
 source_file="res://assets/sprites/buttons/quitHover.png"
-source_md5="30e1e9e40bb24fe5e112acade6b0b755"
+source_md5="cf9538785f68b7e6764a17e37822de41"
 
 dest_files=[ "res://.import/quitHover.png-266c700aa57942d6876009ebb4333c1c.stex" ]
-dest_md5="099574e05be9d623944a06a558ddb2ce"
+dest_md5="d0a18665a9c85bc677ca3b3b99e45559"
 
 [params]
 

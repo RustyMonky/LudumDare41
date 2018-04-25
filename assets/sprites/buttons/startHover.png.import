@@ -7,10 +7,10 @@ path="res://.import/startHover.png-c0f96d7d231c0bff8fc1e321f988903e.stex"
 [deps]
 
 source_file="res://assets/sprites/buttons/startHover.png"
-source_md5="4da1c9ab690efecf9214c0bb717649d4"
+source_md5="3bea4603143a0e924cd8f29164bd63c2"
 
 dest_files=[ "res://.import/startHover.png-c0f96d7d231c0bff8fc1e321f988903e.stex" ]
-dest_md5="5fd1ee8b57745bd6da588ad88b5aa1df"
+dest_md5="092ffe1381ca99ba70b4cee007eba8e7"
 
 [params]
 

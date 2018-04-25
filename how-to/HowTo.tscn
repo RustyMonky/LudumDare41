@@ -7,8 +7,6 @@
 [ext_resource path="res://assets/sprites/buttons/gotItHover.png" type="Texture" id=5]
 [ext_resource path="res://assets/music/click.wav" type="AudioStream" id=6]
 
-
-
 [node name="Node" type="Node"]
 
 script = ExtResource( 1 )
@@ -110,15 +108,13 @@ texture_normal = ExtResource( 4 )
 texture_hover = ExtResource( 5 )
 _sections_unfolded = [ "Textures" ]
 
-[node name="click" type="AudioStreamPlayer2D" parent="Control/NinePatchRect/gotIt" index="0"]
+[node name="click" type="AudioStreamPlayer" parent="Control/NinePatchRect/gotIt" index="0"]
 
 stream = ExtResource( 6 )
 volume_db = 5.0
 autoplay = false
-max_distance = 2000.0
-attenuation = 1.0
+mix_target = 0
 bus = "Master"
-area_mask = 1
 
 [connection signal="pressed" from="Control/NinePatchRect/gotIt" to="." method="_on_gotIt_pressed"]
 

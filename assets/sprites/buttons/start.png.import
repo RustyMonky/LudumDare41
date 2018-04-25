@@ -7,10 +7,10 @@ path="res://.import/start.png-542531ebe89776de71da3a68163efd8f.stex"
 [deps]
 
 source_file="res://assets/sprites/buttons/start.png"
-source_md5="68fe1f23ca1ea4cb0a408b40cf6c38c2"
+source_md5="f47b42505bbbe48310b976b1809ff44f"
 
 dest_files=[ "res://.import/start.png-542531ebe89776de71da3a68163efd8f.stex" ]
-dest_md5="7d6892fd13261e63c6aa832283070aa5"
+dest_md5="5b70efdae8498e849c5d74700583efce"
 
 [params]
 
