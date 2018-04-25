@@ -4,16 +4,16 @@
 [ext_resource path="res://assets/sprites/hp/under.png" type="Texture" id=2]
 [ext_resource path="res://assets/sprites/hp/over.png" type="Texture" id=3]
 [ext_resource path="res://assets/sprites/hp/progress.png" type="Texture" id=4]
-[ext_resource path="res://assets/sprites/clock.png" type="Texture" id=5]
+[ext_resource path="res://assets/sprites/misc/clock.png" type="Texture" id=5]
 [ext_resource path="res://assets/fonts/clockFont.tres" type="DynamicFont" id=6]
-[ext_resource path="res://assets/sprites/topUiPatch.png" type="Texture" id=7]
-[ext_resource path="res://assets/sprites/labelUiPatch.png" type="Texture" id=8]
+[ext_resource path="res://assets/sprites/patch9Frames/topUiPatch.png" type="Texture" id=7]
+[ext_resource path="res://assets/sprites/patch9Frames/labelUiPatch.png" type="Texture" id=8]
 [ext_resource path="res://assets/fonts/gameTextFont.tres" type="DynamicFont" id=9]
-[ext_resource path="res://assets/sprites/deck.png" type="Texture" id=10]
-[ext_resource path="res://assets/sprites/tempSplash.png" type="Texture" id=11]
+[ext_resource path="res://assets/sprites/misc/deck.png" type="Texture" id=10]
+[ext_resource path="res://assets/sprites/backgrounds/tempSplash.png" type="Texture" id=11]
 [ext_resource path="res://assets/music/bumblebeeLoop.wav" type="AudioStream" id=12]
 
-[node name="Game" type="Node" index="0"]
+[node name="Game" type="Node"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Anchor", "Margin", "Rect", "Transform", "Z Index" ]
@@ -401,14 +401,12 @@ autostart = false
 
 [node name="node2d" type="Node2D" parent="." index="2"]
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="node2d" index="0"]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="node2d" index="0"]
 
 stream = ExtResource( 12 )
 volume_db = 5.0
 autoplay = true
-max_distance = 2000.0
-attenuation = 1.0
+mix_target = 0
 bus = "Master"
-area_mask = 1
 
 

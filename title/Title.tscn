@@ -1,18 +1,18 @@
 [gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://title/Title.gd" type="Script" id=1]
-[ext_resource path="res://assets/sprites/tempSplash.png" type="Texture" id=2]
-[ext_resource path="res://assets/sprites/start.png" type="Texture" id=3]
-[ext_resource path="res://assets/sprites/startHover.png" type="Texture" id=4]
-[ext_resource path="res://assets/sprites/credits.png" type="Texture" id=5]
-[ext_resource path="res://assets/sprites/creditsHover.png" type="Texture" id=6]
-[ext_resource path="res://assets/sprites/quit.png" type="Texture" id=7]
-[ext_resource path="res://assets/sprites/quitHover.png" type="Texture" id=8]
+[ext_resource path="res://assets/sprites/backgrounds/tempSplash.png" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/buttons/start.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/buttons/startHover.png" type="Texture" id=4]
+[ext_resource path="res://assets/sprites/buttons/credits.png" type="Texture" id=5]
+[ext_resource path="res://assets/sprites/buttons/creditsHover.png" type="Texture" id=6]
+[ext_resource path="res://assets/sprites/buttons/quit.png" type="Texture" id=7]
+[ext_resource path="res://assets/sprites/buttons/quitHover.png" type="Texture" id=8]
 [ext_resource path="res://assets/fonts/titleFont.tres" type="DynamicFont" id=9]
-[ext_resource path="res://assets/sprites/topUiPatch.png" type="Texture" id=10]
+[ext_resource path="res://assets/sprites/patch9Frames/topUiPatch.png" type="Texture" id=10]
 [ext_resource path="res://assets/fonts/creditsFont.tres" type="DynamicFont" id=11]
-[ext_resource path="res://assets/sprites/back.png" type="Texture" id=12]
-[ext_resource path="res://assets/sprites/backHover.png" type="Texture" id=13]
+[ext_resource path="res://assets/sprites/buttons/back.png" type="Texture" id=12]
+[ext_resource path="res://assets/sprites/buttons/backHover.png" type="Texture" id=13]
 [ext_resource path="res://assets/music/title.wav" type="AudioStream" id=14]
 [ext_resource path="res://assets/music/click.wav" type="AudioStream" id=15]
 
@@ -58,9 +58,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 margin_left = -64.0
-margin_top = -208.0
+margin_top = -216.0
 margin_right = 64.0
-margin_bottom = -144.0
+margin_bottom = -152.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -83,9 +83,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 margin_left = -64.0
-margin_top = -136.0
+margin_top = -144.0
 margin_right = 64.0
-margin_bottom = -72.0
+margin_bottom = -80.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -108,8 +108,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 margin_left = -64.0
-margin_top = -64.0
+margin_top = -72.0
 margin_right = 64.0
+margin_bottom = -8.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -123,7 +124,7 @@ shortcut = null
 group = null
 texture_normal = ExtResource( 7 )
 texture_hover = ExtResource( 8 )
-_sections_unfolded = [ "Textures" ]
+_sections_unfolded = [ "Rect", "Textures" ]
 
 [node name="title" type="Label" parent="GUI/splash" index="3"]
 
@@ -234,25 +235,21 @@ _sections_unfolded = [ "Textures" ]
 
 [node name="Node2D" type="Node2D" parent="." index="1"]
 
-[node name="music" type="AudioStreamPlayer2D" parent="Node2D" index="0"]
+[node name="music" type="AudioStreamPlayer" parent="Node2D" index="0"]
 
 stream = ExtResource( 14 )
 volume_db = 5.0
 autoplay = true
-max_distance = 2000.0
-attenuation = 1.0
+mix_target = 0
 bus = "Master"
-area_mask = 1
 
-[node name="click" type="AudioStreamPlayer2D" parent="Node2D" index="1"]
+[node name="click" type="AudioStreamPlayer" parent="Node2D" index="1"]
 
 stream = ExtResource( 15 )
 volume_db = 0.0
 autoplay = false
-max_distance = 2000.0
-attenuation = 1.0
+mix_target = 0
 bus = "Master"
-area_mask = 1
 
 [connection signal="pressed" from="GUI/splash/play" to="." method="_on_play_pressed"]
 
