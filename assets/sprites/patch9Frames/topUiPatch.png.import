@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/deck.png-4c3121a9f3501e36ee5205f501a479d9.stex"
+path="res://.import/topUiPatch.png-ca1bd804c91627e2b4383e9e95932954.stex"
 
 [deps]
 
-source_file="res://assets/sprites/deck.png"
-source_md5="2b2c80a700ac97d8bec6d7978749fa39"
+source_file="res://assets/sprites/patch9Frames/topUiPatch.png"
+source_md5="49d6bcad1ed54545432c78d2c9529568"
 
-dest_files=[ "res://.import/deck.png-4c3121a9f3501e36ee5205f501a479d9.stex" ]
-dest_md5="04fb7cae420f2068959bd01fcbb15eb4"
+dest_files=[ "res://.import/topUiPatch.png-ca1bd804c91627e2b4383e9e95932954.stex" ]
+dest_md5="91759b95ecd8fad2dbf529309e060d6f"
 
 [params]
 

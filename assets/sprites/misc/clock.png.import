@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/labelUiPatch.png-4339fed8cfea94bb7a2d82742ed963f2.stex"
+path="res://.import/clock.png-fe09846520330d897da13b449f4b490c.stex"
 
 [deps]
 
-source_file="res://assets/sprites/labelUiPatch.png"
-source_md5="0459bbd1051f54c909373f7fd36bfe74"
+source_file="res://assets/sprites/misc/clock.png"
+source_md5="dbffc677f880745db2d2eb872a3352a5"
 
-dest_files=[ "res://.import/labelUiPatch.png-4339fed8cfea94bb7a2d82742ed963f2.stex" ]
-dest_md5="c2bb3f97a0a66cc9ee34870e612684ef"
+dest_files=[ "res://.import/clock.png-fe09846520330d897da13b449f4b490c.stex" ]
+dest_md5="2d23bd6b0b9c5d1303eeb501ae198932"
 
 [params]
 

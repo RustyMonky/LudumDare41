@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tempSplash.png-531de75a1a0cbd81f00626046fe25c02.stex"
+path="res://.import/mouse.png-93a8021d206670a29378a41087afb8a9.stex"
 
 [deps]
 
-source_file="res://assets/sprites/tempSplash.png"
-source_md5="28937fc02055477c6e56584519b40560"
+source_file="res://assets/sprites/misc/mouse.png"
+source_md5="20f2f75c05f7af8b3fbbcf26193b5613"
 
-dest_files=[ "res://.import/tempSplash.png-531de75a1a0cbd81f00626046fe25c02.stex" ]
-dest_md5="5f3d31ea85e6ee32350da5f60215b950"
+dest_files=[ "res://.import/mouse.png-93a8021d206670a29378a41087afb8a9.stex" ]
+dest_md5="db9f2d829a3814dc91b9eedb5f92474e"
 
 [params]
 

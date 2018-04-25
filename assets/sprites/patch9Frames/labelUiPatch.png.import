@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/mouse.png-bf4c8fe7907531f90e09a2e10632dcf1.stex"
+path="res://.import/labelUiPatch.png-d50d3a34cfdde4df9b0e6136bc128e11.stex"
 
 [deps]
 
-source_file="res://assets/sprites/mouse.png"
-source_md5="20f2f75c05f7af8b3fbbcf26193b5613"
+source_file="res://assets/sprites/patch9Frames/labelUiPatch.png"
+source_md5="0459bbd1051f54c909373f7fd36bfe74"
 
-dest_files=[ "res://.import/mouse.png-bf4c8fe7907531f90e09a2e10632dcf1.stex" ]
-dest_md5="db9f2d829a3814dc91b9eedb5f92474e"
+dest_files=[ "res://.import/labelUiPatch.png-d50d3a34cfdde4df9b0e6136bc128e11.stex" ]
+dest_md5="c2bb3f97a0a66cc9ee34870e612684ef"
 
 [params]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://title/Title.gd" type="Script" id=1]
-[ext_resource path="res://assets/sprites/tempSplash.png" type="Texture" id=2]
+[ext_resource path="res://assets/sprites/backgrounds/tempSplash.png" type="Texture" id=2]
 [ext_resource path="res://assets/sprites/buttons/start.png" type="Texture" id=3]
 [ext_resource path="res://assets/sprites/buttons/startHover.png" type="Texture" id=4]
 [ext_resource path="res://assets/sprites/buttons/credits.png" type="Texture" id=5]
@@ -9,7 +9,7 @@
 [ext_resource path="res://assets/sprites/buttons/quit.png" type="Texture" id=7]
 [ext_resource path="res://assets/sprites/buttons/quitHover.png" type="Texture" id=8]
 [ext_resource path="res://assets/fonts/titleFont.tres" type="DynamicFont" id=9]
-[ext_resource path="res://assets/sprites/topUiPatch.png" type="Texture" id=10]
+[ext_resource path="res://assets/sprites/patch9Frames/topUiPatch.png" type="Texture" id=10]
 [ext_resource path="res://assets/fonts/creditsFont.tres" type="DynamicFont" id=11]
 [ext_resource path="res://assets/sprites/buttons/back.png" type="Texture" id=12]
 [ext_resource path="res://assets/sprites/buttons/backHover.png" type="Texture" id=13]

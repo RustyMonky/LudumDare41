@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/clock.png-d5b80cf4af540b668434937bb0b843c8.stex"
+path="res://.import/deck.png-bc8c544772df210b3f6c2d3b329fc693.stex"
 
 [deps]
 
-source_file="res://assets/sprites/clock.png"
-source_md5="dbffc677f880745db2d2eb872a3352a5"
+source_file="res://assets/sprites/misc/deck.png"
+source_md5="2b2c80a700ac97d8bec6d7978749fa39"
 
-dest_files=[ "res://.import/clock.png-d5b80cf4af540b668434937bb0b843c8.stex" ]
-dest_md5="2d23bd6b0b9c5d1303eeb501ae198932"
+dest_files=[ "res://.import/deck.png-bc8c544772df210b3f6c2d3b329fc693.stex" ]
+dest_md5="04fb7cae420f2068959bd01fcbb15eb4"
 
 [params]
 
